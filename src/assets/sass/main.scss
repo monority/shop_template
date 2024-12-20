@@ -3,6 +3,7 @@
 @use "mixin";
 @use "./components/header";
 @use "./components/subnav";
+@use "./pages/hero";
 
 .lyt_container {
 	padding: 0;

@@ -22,6 +22,7 @@ const Header = () => {
 
 	return (
 		<>
+			<div className="lyt_container">
 				<header id="header">
 					<div className="container">
 						<div className="element">
@@ -55,7 +56,7 @@ const Header = () => {
 						</div>
 					</div>
 				</header>
-		
+			</div>
 		</>
 	);
 };
