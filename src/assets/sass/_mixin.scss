@@ -1,0 +1,43 @@
+
+@use "variables" as v;
+
+@mixin flexbox($align, $justify,$direction){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin button ($padding,$bgColor,$color,$width, $height, $border, $border_radius, $color_hover , $font_size, $font_weight, $box_shadow){
+    padding: $padding;
+    background-color: $bgColor;
+    color: $color;
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $border_radius;
+	font-size: $font_size;
+	font-weight: $font_weight;
+	box-shadow: $box_shadow;
+	font-family : var(--font_family01);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        color : $color_hover;
+    }
+}
+
+@mixin box(){
+    background: var(--background_secondary);
+    border-radius: 1.5rem;
+	border : var(--border_box);
+    padding: var(--size_rem_3);
+    flex-direction: column;
+    row-gap:var(--size_rem_12);
+}
+  
+  
+  
+  
+  
+  

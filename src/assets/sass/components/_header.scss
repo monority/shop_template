@@ -1,0 +1,20 @@
+header {
+	height: 10rem;
+	.container {
+		height: var(--stg_100);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.element{
+		display: flex;
+		position: relative;
+	}
+	.menu_wrapper{
+		display: flex;
+		column-gap: var(--size_rem_25);
+	}
+	svg{
+		cursor: pointer;
+	}
+}

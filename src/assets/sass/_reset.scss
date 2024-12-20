@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scrollbar-color: var(--scrollbar_color);
+	scrollbar-width: thin;
+
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var(--bg_color01);
+	color: var(--text_color01);
+	margin: var(--stg_zero);
+	padding: var(--stg_zero);
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	font-size: 1.6rem;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+	font-optical-sizing: auto;
+	line-height: 1.5;
+	letter-spacing: 0rem;
+	font-weight: 400;
+	word-spacing: 0.2px;
+	tab-size: 4;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: var(--stg_zero);
+	padding: var(--stg_zero);
+
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("./fonts/Inter.woff") format('woff');
+	font-weight: 400;
+  }
+  
+  @font-face {
+	font-family: "Inter";
+	src: url("./fonts/Inter.woff2") format('woff2');
+	font-weight: 400;
+  }
+  
+
+:root {
+
+	--text_size01: calc(1rem + 0.2vw);
+	--text_size02: calc(1.2rem + 0.2vw);
+	--text_size03: calc(1.4rem + 0.2vw);
+	--text_size04: calc(1.6rem + 0.2vw);
+	--text_size05: calc(1.8rem + 0.2vw);
+	--text_size06: calc(2rem + 0.2vw);
+	--text_size07: calc(2.2rem + 0.2vw);
+	--text_size08: calc(2.4rem + 0.2vw);
+	--text_size09: calc(2.6rem + 0.2vw);
+	--text_size10: calc(2.8rem + 0.2vw);
+	--title_size01: calc(3rem + 0.2vw);
+	--title_size02: calc(3.5rem + 0.2vw);
+	--title_size03: calc(4rem + 0.2vw);
+	--title_size04: calc(4.5rem + 0.2vw);
+	--title_size05: calc(5rem + 0.2vw);
+	--title_size06: calc(5.5rem + 0.2vw);
+	--title_size07: calc(6rem + 0.2vw);
+	--title_size08: calc(6.5rem + 0.2vw);
+	--title_size09: calc(7rem + 0.2vw);
+	--title_size10: calc(7.5rem + 0.2vw);
+	--size_rem_05: 0.5rem;
+	--size_rem_1: 1rem;
+	--size_rem_15: 1.5rem;
+	--size_rem_2: 2rem;
+	--size_rem_25: 2.5rem;
+	--size_rem_3: 3rem;
+	--size_rem_35: 3.5rem;
+	--size_rem_4: 4rem;
+	--size_rem_45: 4.5rem;
+	--size_rem_5: 5rem;
+	--size_rem_55: 5.5rem;
+	--size_rem_6: 6rem;
+	--size_rem_65: 6.5rem;
+	--size_rem_7: 7rem;
+	--size_rem_75: 7.5rem;
+	--size_rem_8: 8rem;
+	--btn_padding01: 0.6rem 0.9rem;
+	--btn_padding02: 0.8rem 1.5rem;
+	--font_family01: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	--font_family02: 'Roboto', sans-serif;
+	--font_family03: 'Radio Canada', sans-serif;
+	--font_family04: "Oswald", sans-serif;
+	--transition01: all .2s ease-in-out;
+	--stg_zero: 0;
+	--stg_50: 50%;
+	--stg_100: 100%;
+	--stg_transparent: transparent;
+	--scrollbar_color: #8e8e8e #ffffff;
+}
+
+[data-theme="dark"] {
+	--text_color01: #9aaec9;
+	--text_color02: #d4d2e7;
+	--text_color_spe01 : #b63e3e;
+	--bg_faded_color01 : rgba(29, 29, 29, 0.95);
+	--bg_faded_color02 : rgba(29, 29, 29, 0.9);
+	--bg_faded_color03 : rgba(136, 136, 136, 0.1);
+	--bg_color01: rgb(13, 12, 15);
+	--bg_color02: rgb(13, 13, 24);
+	--bg_color03: #161616;
+	--bg_color04: #177a62;
+	--bg_color05: #d8d8d8;
+	--bg_color06: #1457bb;
+	--bg_color07: #202020;
+	--bg_color08: #121016;
+	--bg_color09: #2b2b2b;
+	--border_color01: solid 0.2px #2d2f38d7;
+	--border_color02: solid 0.2px #50505079;
+	--border_color03: solid 0.2px #50505023;
+	--border_color04: solid 0.2px #03ffc057;
+	--box_shadow01: 0 10px 15px -3px #aaaaaa13, 0 4px 6px -4px #e0e0e010;
+}
+
+[data-theme="light"] {
+	--text_color01: rgb(54, 54, 54);
+	--text_color02: #62729e;
+	--text_color_spe01 : rgb(221, 46, 46);
+	--bg_faded_color01 : rgba(224, 224, 224, 0.95);
+	--bg_faded_color02 : rgba(29, 29, 29, 0.9);
+	--bg_faded_color03 : rgba(136, 136, 136, 0.1);
+	--bg_color01: white;
+	--bg_color02: rgb(247, 247, 247);
+	--bg_color03: rgb(243, 242, 242);
+	--bg_color04: #46e0ba;
+	--bg_color05: #e7e7e7;
+	--bg_color06: #3586ff;
+	--bg_color07: #292929;
+	--bg_color08: #f2f8ff;
+	--bg_color09: #2b2b2b;
+	--border_color01: solid 0.2px #b4b5bd4f;
+	--border_color02: solid 0.2px #50505079;
+	--border_color03: solid 0.2px #50505023;
+	--border_color04: solid 0.2px #03ffc057;
+	--box_shadow01: 0 10px 15px -3px #aaaaaa13, 0 4px 6px -4px #e0e0e010;
+
+}
