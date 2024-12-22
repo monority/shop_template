@@ -1,5 +1,44 @@
-#hero{
-	video{
-		width: var(--stg_100);
+#hero {
+	.video_container {
+		max-height: 20vw;
+		overflow: hidden;
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.video_figure {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		gap: 6rem;
+	}
+
+	.img_figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		max-width: calc(30rem + 10vw)
+
+	}
+
+	h1 {
+		text-align: center;
 	}
 }

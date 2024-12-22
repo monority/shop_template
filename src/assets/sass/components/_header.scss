@@ -1,5 +1,9 @@
 header {
-	height: 10rem;
+	height: 12vh;
+	background: transparent;
+	position: sticky;
+	top: 0;
+	left: 0;
 	.container {
 		height: var(--stg_100);
 		display: flex;
