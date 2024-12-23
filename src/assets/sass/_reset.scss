@@ -54,17 +54,17 @@ p {
 	font-family: "Inter";
 	src: url("./fonts/Inter.woff") format('woff');
 	font-weight: 400;
-  }
-  
-  @font-face {
+}
+
+@font-face {
 	font-family: "Inter";
 	src: url("./fonts/Inter.woff2") format('woff2');
 	font-weight: 400;
-  }
-  
+}
+
 
 :root {
-
+	--lg_breakpoint: 992px;
 	--text_size01: calc(1rem + 0.2vw);
 	--text_size02: calc(1.2rem + 0.2vw);
 	--text_size03: calc(1.4rem + 0.2vw);
@@ -118,10 +118,10 @@ p {
 [data-theme="dark"] {
 	--text_color01: #9aaec9;
 	--text_color02: #d4d2e7;
-	--text_color_spe01 : #b63e3e;
-	--bg_faded_color01 : rgba(29, 29, 29, 0.95);
-	--bg_faded_color02 : rgba(29, 29, 29, 0.9);
-	--bg_faded_color03 : rgba(136, 136, 136, 0.1);
+	--text_color_spe01: #b63e3e;
+	--bg_faded_color01: rgba(29, 29, 29, 0.95);
+	--bg_faded_color02: rgba(29, 29, 29, 0.9);
+	--bg_faded_color03: rgba(136, 136, 136, 0.1);
 	--bg_color01: rgb(13, 12, 15);
 	--bg_color02: rgb(13, 13, 24);
 	--bg_color03: #161616;
@@ -141,10 +141,10 @@ p {
 [data-theme="light"] {
 	--text_color01: rgb(54, 54, 54);
 	--text_color02: #62729e;
-	--text_color_spe01 : rgb(221, 46, 46);
-	--bg_faded_color01 : rgba(224, 224, 224, 0.95);
-	--bg_faded_color02 : rgba(29, 29, 29, 0.9);
-	--bg_faded_color03 : rgba(136, 136, 136, 0.1);
+	--text_color_spe01: rgb(221, 46, 46);
+	--bg_faded_color01: rgba(224, 224, 224, 0.95);
+	--bg_faded_color02: rgba(29, 29, 29, 0.9);
+	--bg_faded_color03: rgba(136, 136, 136, 0.1);
 	--bg_color01: white;
 	--bg_color02: rgb(247, 247, 247);
 	--bg_color03: rgb(243, 242, 242);

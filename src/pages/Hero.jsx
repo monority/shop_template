@@ -16,14 +16,17 @@ const Hero = ({ video, img }) => {
 							<video src={video} autoPlay loop muted></video>
 						</div>
 					</div> */}
-						<div className="img_container">
-							<div className="img_figure">
-								<img src={img} alt="" />
-							</div>
-						</div>
 						<div className="content_container">
-							<div className="wrapper">
-								<h1>We strive to give you the sneaker you looking for</h1>
+							<div className="wrapper_text">
+								<h1>TRENDY SHOES OF LUXURY</h1>
+								<p>You will find all the sneakers trending now, available in a limited time. We gathering our product from famous brands and independant creators.</p>
+							</div>
+							<div className="wrapper_img">
+								<div className="img_container">
+									<div className="img_figure">
+										<img src={img} alt="" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
