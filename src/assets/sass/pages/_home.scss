@@ -1,26 +1,34 @@
 @use "../variables" as v;
 
+#home{
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
 #hero {
 	.content_container {
 		display: flex;
 		flex-direction: column;
 		gap: var(--size_rem_4);
+
 		@media (min-width: v.$lg_breakpoint) {
 			flex-direction: row;
 		}
 	}
-	.wrapper_img{
-		order : -1;
+
+	.wrapper_img {
+		order: -1;
+
 		@media (min-width: v.$lg_breakpoint) {
-			order:0;
+			order: 0;
 			flex-basis: 70%;
 		}
 	}
-	.wrapper_text{
+	.element_btn {
 		display: flex;
-		flex-direction: column;
-		gap: 2rem	;
-		flex-basis: 30%;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	.container {
@@ -31,7 +39,7 @@
 		gap: 6rem;
 	}
 
-	.img_figure {
+	.figure_img {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -43,7 +51,23 @@
 		max-width: calc(30rem + 10vw)
 	}
 
+	p {
+		font-size: var(--text_size03);
+	}
+
 	h1 {
 		text-align: center;
+		font-size: var(--title_size01);
+	}
+}
+
+#trending {
+	.wrapper_layout{
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		@media (min-width: v.$lg_breakpoint) {
+			flex-direction: row;
+		}
 	}
 }

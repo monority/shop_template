@@ -26,7 +26,7 @@ const Header = () => {
 				<header id="header">
 					<div className="container">
 						<div className="element">
-							<h1>Phon<strong className='text_color02'>ara</strong>.</h1>
+							<h1>Sneak<strong className='text_color02'>ara</strong>.</h1>
 						</div>
 						<div className="element">
 							<input type="search" className='input_base' name="search_header" id="search_header" value="" />

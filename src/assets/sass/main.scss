@@ -4,20 +4,26 @@
 @use "classes";
 @use "./components/header";
 @use "./components/subnav";
-@use "./pages/hero";
+@use "./pages/home";
+
 
 .lyt_container {
 	padding: 0;
 	margin: 0 auto;
 	max-width: 85vw;
 }
-section{
+.container_gap {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+section {
 	height: 60vh;
 }
 
 input[type="search"] {
 	background-color: var(--bg_color02);
-	color : var(--text_color01);
+	color: var(--text_color01);
 	border: var(--border_color01);
 	border-radius: var(--size_rem_05);
 	height: var(--size_rem_35);
@@ -27,6 +33,24 @@ input[type="search"] {
 	padding: var(--size_rem_1);
 }
 
+.btn {
+	border-radius: var(--size_rem_05);
+	padding: var(--size_rem_15);
+	font-size: var(--size_rem_15);
+	font-weight: bold;
+}
+
+.btn_base {
+	border: var(--border_color01);
+	background-color: var(--highlight_color01);
+	color: var(--text_color03)
+}
+
+.btn_base_highlight {
+	border: var(--border_color02);
+	background-color: var(--highlight_color02);
+	color: var(--text_color01);
+}
 
 label {
 	display: flex;
@@ -40,7 +64,8 @@ label {
 	pointer-events: none;
 	transition: 0.3s;
 }
-.input_base:focus~label {
+
+.input_base:focus ~ label {
 	opacity: 0;
 	top: 0;
 	left: 15px;
@@ -48,3 +73,16 @@ label {
 	font-size: var(--size_rem_05);
 }
 
+.figure_img_base {
+	display: flex;
+	align-items: center;
+	border-radius: var(--size_rem_2);
+	background: var(--bg_color02);
+	width: fit-content;
+	padding: var(--size_rem_1);
+	min-height: 30rem;
+	img{
+		object-fit: scale-down;
+		width: 100%
+	}
+}

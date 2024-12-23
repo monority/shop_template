@@ -20,3 +20,28 @@
 .text_color_spe01{
 	color: var(--text_color_spe01);
 }
+.text_center{
+	text-align: center;
+}
+.font_family_mtserrat{
+	font-family: "Montserrat", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+.font_family_lato {
+	font-family: "Lato", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  h1, h2,h3,h4,h5,h6{
+	text-transform: uppercase;
+	font-family: "Montserrat", serif;
+}
+
+h1{
+	font-size: var(--title_size01);
+}
+h2{
+	font-size: var(--text_size09);
+}
