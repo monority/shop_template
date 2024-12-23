@@ -1,4 +1,5 @@
 import React from 'react'
+import Rating from '../global/Rating'
 
 const SneakerCard = ({ img, title, text, price, stars }) => {
 	return (
@@ -12,16 +13,12 @@ const SneakerCard = ({ img, title, text, price, stars }) => {
 				</div>
 				<div className="element">
 					<p>{text}</p>
+					<p>{price} $</p>
 				</div>
 				<div className="element">
-					<p>{text}</p>
-				</div>
-				<div className="element">
-					<p>{text}</p>
-					<p>{price}</p>
-				</div>
-				<div className="element">
-					<p>{stars}</p>
+					<p>{Rating.map(element => {
+						{element.stars}
+					})}</p>
 
 				</div>
 
