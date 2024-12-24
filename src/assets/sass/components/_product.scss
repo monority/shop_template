@@ -1,0 +1,20 @@
+.product {
+	background: var(--bg_color01);
+	border: var(--border_color03);
+	box-shadow: var(--box_shadow01);
+	border-radius: var(--size_rem_1);
+	.figure_img {
+		background-color: var(--bg_color03);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	p {
+		font-size: var(--text_size03);
+	}
+
+	h1 {
+		text-align: center;
+		font-size: var(--title_size01);
+	}
+}

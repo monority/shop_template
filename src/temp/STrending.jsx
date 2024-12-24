@@ -6,5 +6,21 @@ export const data = [
 		text : "Yes",
 		price : "150",
 		stars : 5,
+	},
+	{
+		id : 2,
+		img : "img/img_trending/trending01.png",
+		title : "Jordan NSM",
+		text : "Yes",
+		price : "150",
+		stars : 5,
+	},
+	{
+		id : 3,
+		img : "img/img_trending/trending02.png",
+		title : "Adidas NL FORCE",
+		text : "Yes",
+		price : "150",
+		stars : 5,
 	}
 ]
