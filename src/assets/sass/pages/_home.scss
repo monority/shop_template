@@ -1,10 +1,11 @@
 @use "../variables" as v;
 
-#home{
+#home {
 	display: flex;
 	flex-direction: column;
 	gap: 4rem;
 }
+
 #hero {
 	.content_container {
 		display: flex;
@@ -24,6 +25,7 @@
 			flex-basis: 70%;
 		}
 	}
+
 	.element_btn {
 		display: flex;
 		justify-content: center;
@@ -47,13 +49,23 @@
 	}
 }
 
-#trending {
-	.wrapper_layout{
+#reviews {
+	padding: 2rem;
+
+	.wrapper_cover {
 		display: flex;
-		flex-direction: column;
-		gap: 4rem;
-		@media (min-width: v.$lg_breakpoint) {
-			flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--size_rem_4);
+		.element{
+			max-height: 70rem;
 		}
+	}
+
+	img {
+		display: block;
+		margin: auto;
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
 	}
 }
