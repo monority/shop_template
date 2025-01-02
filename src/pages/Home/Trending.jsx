@@ -1,6 +1,8 @@
 import React from 'react'
 import { data } from '../../temp/STrending'
 import ProductCard from '../../components/Home/ProductCard'
+import { useEffect } from 'react'
+import { ProductFetch } from '../../queries/ProductFetch'
 const Trending = ({ img_trend00, img_trend01, img_trend02 }) => {
 	img_trend00 = "img/img_trending/trending.png"
 	img_trend01 = "img/img_trending/trending01.png"
@@ -18,7 +20,10 @@ const Trending = ({ img_trend00, img_trend01, img_trend02 }) => {
 				stars={sneaker.stars}
 			/>)
 	})
-
+	useEffect(() => {
+		ProductFetch()
+	}, [])
+	
 	return (
 		<>
 			<section id="trending">
