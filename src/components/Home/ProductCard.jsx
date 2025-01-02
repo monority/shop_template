@@ -28,7 +28,8 @@ const ProductCard = ({ img, title, text, price, stars }) => {
 		<div className="product">
 			<div className="figure_img_base">
 				<img src={img} alt={title} />
-				<div className="figure_caption">
+			</div>
+			<div className="figure_caption">
 					<div className="element">
 						<h3>{title}</h3>
 					</div>
@@ -42,7 +43,6 @@ const ProductCard = ({ img, title, text, price, stars }) => {
 						<div className="stars">{renderStars()}</div>
 					</div>
 				</div>
-			</div>
 		</div>
 	);
 };

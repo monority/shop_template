@@ -27,7 +27,7 @@ const Trending = ({ img_trend00, img_trend01, img_trend02 }) => {
 						<div className="wrapper">
 							<h2 className='text_center font_family_lato'>Trending</h2>
 						</div>
-						<div className="wrapper_layout_center">
+						<div className="wrapper_layout_center flex_wrap">
 							{display_sneakers}
 						</div>
 					</div>

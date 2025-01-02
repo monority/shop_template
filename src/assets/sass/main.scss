@@ -25,15 +25,22 @@
 		flex-direction: row;
 	}
 }
-
 .container_gap {
 	display: flex;
 	flex-direction: column;
 	gap: 4rem;
 }
-
-section {
-	height: 60vh;
+.container_fullcolor{
+	padding: 10rem;
+	background-color: var(--bg_color02);
+}
+.container_row{
+	display: flex;
+	gap: 4rem;
+}
+section{
+	margin-top: 10rem;
+	margin-bottom: 10rem;
 }
 
 input[type="search"] {
@@ -91,12 +98,12 @@ label {
 .figure_img_base {
 	display: flex;
 	flex-direction: column;
-	border-radius: var(--size_rem_15);
 	gap: 2rem;
 	background: var(--bg_color02);
 	padding: var(--size_rem_2);
-	min-height: 30rem;
-	max-width: 30rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	.figure_caption {
 		display: flex;
@@ -105,8 +112,8 @@ label {
 	}
 
 	img {
-		object-fit: fill;
-		width: 100%
+		object-fit: cover;
+		width: 50%;
 	}
 }
 
