@@ -31,6 +31,7 @@ const Trending = () => {
 				title={sneaker.title}
 				type={sneaker.metadata.category}
 				colors={sneaker.color}
+				description={sneaker.description}
 				img={sneaker.image}
 				price={Math.floor(sneaker.avg_price, 2)}
 				stars={sneaker.stars}
@@ -41,13 +42,15 @@ const Trending = () => {
 	return (
 		<>
 			<section id="trending">
-				<div className="container">
-					<div className="container_gap">
-						<div className="wrapper">
-							<h2 className='text_center font_family_lato'>Trending</h2>
-						</div>
-						<div className="wrapper_layout_center flex_wrap">
-							{display_sneakers}
+				<div className="lyt_container_small">
+					<div className="container">
+						<div className="container_gap">
+							<div className="wrapper">
+								<h2 className='text_center font_family_lato'>Trending</h2>
+							</div>
+							<div className="wrapper_layout_center flex_wrap">
+								{display_sneakers}
+							</div>
 						</div>
 					</div>
 				</div>

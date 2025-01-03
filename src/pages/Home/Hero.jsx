@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router';
 import Trending from './Trending';
 
-const Hero = ({ video, img , text_title, title  }) => {
+const Hero = ({ video, img, text_title, title }) => {
 	const location = useLocation();
 	const checklocation = location.pathname === "";
 	video = "/video/hero.webm"
@@ -11,7 +11,8 @@ const Hero = ({ video, img , text_title, title  }) => {
 	text_title = "You will find all the sneakers trending now, available in a limited time. We gathering our product from famous brands and independant creators."
 	return (
 		<>
-				<section id="hero">
+			<section id="hero">
+				<div className="lyt_container">
 					<div className="container">
 						{/* <div className="video_container">
 						<div className="video_figure">
@@ -41,7 +42,8 @@ const Hero = ({ video, img , text_title, title  }) => {
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 		</>
 	)
 }

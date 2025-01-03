@@ -7,7 +7,7 @@ const Header = () => {
 	const navigate = useNavigate();
 
 	const [active, setActive] = useState(true);
-
+	const [scroll, setScrolled] = useState(false);
 	useEffect(() => {
 		const headerChange = () => {
 			setActive(window.scrollY < 200);
@@ -22,11 +22,11 @@ const Header = () => {
 
 	return (
 		<>
-			<div className="lyt_container">
-				<header id="header">
+			<header id="header" className={active ? "transparent" : "color"}>
+				<div className="lyt_container">
 					<div className="container">
 						<div className="element" onClick={() => navigate("/")}>
-							<h1>Sneak<strong className='text_color02'>ara</strong>.</h1>
+							<p className='title_size01'>Sneak<strong className='text_color02'>ara</strong>.</p>
 						</div>
 						<div className="element">
 							<input type="search" className='input_base' name="search_header" id="search_header" value="" />
@@ -55,8 +55,8 @@ const Header = () => {
 							<li className="menu_element"><DisplayMode /></li>
 						</div>
 					</div>
-				</header>
-			</div>
+				</div>
+			</header>
 		</>
 	);
 };

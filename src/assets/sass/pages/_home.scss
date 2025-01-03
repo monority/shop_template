@@ -3,7 +3,6 @@
 #home {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
 }
 
 #hero {
@@ -95,4 +94,48 @@
 		display: flex;
 		flex-basis: 70%;
 	}
+}
+
+#newsletter{
+	.bg_img_wrapper {
+		height: 35vh;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			opacity: 0.8;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.img_caption {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			flex-direction: column;
+			gap: var(--size_rem_1);
+		}
+
+	}
+
+	label {
+		p {
+			color: var(--text_color01);
+		}
+	}
+
+	.element {
+		display: flex;
+		gap: 2rem;
+		position: relative;
+	}
+
 }

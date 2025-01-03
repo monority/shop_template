@@ -25,6 +25,9 @@
 .text_center {
 	text-align: center;
 }
+.title_size01{
+font-size: var(--title_size01);
+}
 
 .font_family_geist {
 	font-family: "Geist", serif;
@@ -57,4 +60,16 @@ h1 {
 
 h2 {
 	font-size: var(--text_size09);
+}
+.break_word{
+	display: -webkit-box; 
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-clamp: 2;
+}
+
+.w_100{
+	width: var(--stg_100);
 }

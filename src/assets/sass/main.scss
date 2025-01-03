@@ -15,6 +15,12 @@
 	max-width: 85vw;
 }
 
+.lyt_container_small{
+	padding: 0;
+	margin: 0 auto;
+	max-width: 60vw;
+}
+
 .wrapper_layout_center {
 	display: flex;
 	flex-direction: column;
@@ -67,12 +73,22 @@ input {
 	padding: var(--size_rem_15);
 	font-size: var(--size_rem_15);
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .btn_base {
 	border: var(--border_color01);
 	background-color: var(--highlight_color01);
-	color: var(--text_color03)
+	color: var(--text_color03);
+	border-radius: var(--size_rem_05);
+	padding: var(--size_rem_1);
+}
+.btn_shop{
+	border: var(--border_color01);
+	background-color: var(--highlight_color03);
+	color: var(--text_color03);
+	border-radius: var(--size_rem_05);
+	padding: var(--size_rem_1);
 }
 
 .btn_base_highlight {
