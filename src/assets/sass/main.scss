@@ -95,29 +95,11 @@ label {
 	font-size: var(--size_rem_05);
 }
 
-.figure_img_base {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	background: var(--bg_color02);
-	padding: var(--size_rem_2);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	.figure_caption {
-		display: flex;
-		flex-direction: column;
-		gap: var(--size_rem_05);
-	}
-
-	img {
-		object-fit: cover;
-		width: 50%;
-	}
-}
-
 .col {
 	flex: 1 1 0%;
 	position: relative;
+}
+.element_between{
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HalfStar, FullStar, EmptyStar } from '../global/Rating';
-const ProductCard = ({ img, title, text, price, stars }) => {
+const ProductCard = ({ img, title, colors, price, stars , type, link_to}) => {
 
 	const renderStars = () => {
 		const fullStars = Math.floor(stars);
@@ -25,22 +25,23 @@ const ProductCard = ({ img, title, text, price, stars }) => {
 	};
 
 	return (
-		<div className="product">
+		<div className="product" onClick={link_to}>
 			<div className="figure_img_base">
 				<img src={img} alt={title} />
 			</div>
 			<div className="figure_caption">
-					<div className="element">
+					<div className="element_between">
 						<h3>{title}</h3>
+						<h4>{type}</h4>
 					</div>
 					<div className="element">
-						<p className="text_color04">{text}</p>
+						<p className="text_color04">{colors}</p>
 					</div>
 					<div className="element">
 						<p>{price} $</p>
 					</div>
 					<div className="element">
-						<div className="stars">{renderStars()}</div>
+						<div className="stars"></div>
 					</div>
 				</div>
 		</div>

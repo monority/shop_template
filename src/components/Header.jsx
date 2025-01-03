@@ -25,7 +25,7 @@ const Header = () => {
 			<div className="lyt_container">
 				<header id="header">
 					<div className="container">
-						<div className="element">
+						<div className="element" onClick={() => navigate("/")}>
 							<h1>Sneak<strong className='text_color02'>ara</strong>.</h1>
 						</div>
 						<div className="element">

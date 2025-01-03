@@ -1,29 +1,43 @@
 import React from 'react'
-import { data } from '../../temp/STrending'
 import ProductCard from '../../components/Home/ProductCard'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ProductFetch } from '../../queries/ProductFetch'
-const Trending = ({ img_trend00, img_trend01, img_trend02 }) => {
-	img_trend00 = "img/img_trending/trending.png"
-	img_trend01 = "img/img_trending/trending01.png"
-	img_trend02 = "img/img_trending/trending02.png"
-	const trendingSneakers = data.filter(sneaker => sneaker.isTrending);
-	const display_sneakers = trendingSneakers.map(sneaker => {
+import { useNavigate } from 'react-router'
+
+const Trending = () => {
+	const [data, setData] = useState([]);
+	const navigate = useNavigate();
+	const navigation = (id) => {
+		navigate(`product/${id}`, { replace: true })
+	}
+	useEffect(() => {
+		ProductFetch(setData)
+		console.log(data)
+	}, [])
+
+	const exclude_word = ["Slide"];
+
+	const filtered_sneakers = data.filter(sneaker =>
+		sneaker.gender === "male" && !exclude_word.some(word => sneaker.title.includes(word))
+	);
+
+
+
+	const display_sneakers = filtered_sneakers.map(sneaker => {
 		return (
 			<ProductCard
 				key={sneaker.id}
 				id={sneaker.id}
 				title={sneaker.title}
-				text={sneaker.text}
-				img={sneaker.img}
-				price={sneaker.price}
+				type={sneaker.metadata.category}
+				colors={sneaker.color}
+				img={sneaker.image}
+				price={Math.floor(sneaker.avg_price, 2)}
 				stars={sneaker.stars}
+				link_to={() => navigation(sneaker.sku)}
 			/>)
 	})
-	useEffect(() => {
-		ProductFetch()
-	}, [])
-	
+
 	return (
 		<>
 			<section id="trending">
