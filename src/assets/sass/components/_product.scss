@@ -59,6 +59,22 @@
 	}
 }
 #product_details{
+	p{
+		display: inline;
+	}
+	.element_list{
+		display: flex;
+		gap: var(--size_rem_2);
+	}
+	.active{
+		background-color: var(--highlight_color03);
+		color: var(--text_color03);
+	}
+	.default_btn{
+		padding: var(--size_rem_1);
+		border-radius: var(--size_rem_05);
+		border: var(--border_color03);
+	}
 	.container{
 		display: flex;
 		flex-direction: column;
