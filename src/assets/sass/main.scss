@@ -3,6 +3,7 @@
 @use "mixin";
 @use "classes";
 @use "./components/header";
+@use "./components/footer";
 @use "./components/subnav";
 @use "./components/product";
 @use "./pages/home";
@@ -46,6 +47,12 @@ section{
 input[type="search"] {
 	background-color: var(--bg_color02);
 	color: var(--text_color01);
+}
+input[type="text"] {
+	background-color: var(--bg_color02);
+
+}
+input {
 	border: var(--border_color01);
 	border-radius: var(--size_rem_05);
 	height: var(--size_rem_35);

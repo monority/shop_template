@@ -12,11 +12,10 @@ const SubNav = () => {
 					<div id="sub_nav">
 						<div className="container">
 							<div className="menu_wrapper">
-								<li className="element">Women</li>
-								<li className="element">Male</li>
-								<li className="element">Kids</li>
-								<li className="element">Sports</li>
-								<li className="element">New</li>
+								<li className="element">Trending</li>
+								<li className="element">Sneakers</li>
+								<li className="element">Baseball</li>
+								<li className="element">Football</li>
 								<li className="element text_color_spe01">Sale</li>
 							</div>
 							<span className='hr_custom'></span>

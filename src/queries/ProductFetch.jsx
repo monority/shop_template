@@ -38,19 +38,19 @@ export const ProductTrending = ({ data }) => {
 		});
 };
 
-export const ProductById = ({ data, id }) => {
-	const token = "f-64c500d0eaf9d3f8852a55e6616cad3f";
 
+export const ProductById = async (setData, id) => {
+	try {
+		const token = "f-64c500d0eaf9d3f8852a55e6616cad3f";
+		const { data } = await axios.get(`https://api.sneakersapi.dev/api/v2/products/${id}`, {
+			headers: {
+				Authorization: token
+			},
 
-	axios.get(`https://api.sneakersapi.dev/api/v2/products/${id}`, {
-		headers: {
-			Authorization: token
-		},
-	})
-		.then(function (response) {
-			console.log(response.data.data);
-		})
-		.catch(function (error) {
-			console.log(error);
 		});
+		setData(data);
+		console.log(data)
+	} catch (error) {
+		console.error("Error fetching products:", error);
+	}
 };

@@ -3,7 +3,6 @@ import ProductCard from '../../components/Home/ProductCard'
 import { useEffect, useState } from 'react'
 import { ProductFetch } from '../../queries/ProductFetch'
 import { useNavigate } from 'react-router'
-
 const Trending = () => {
 	const [data, setData] = useState([]);
 	const navigate = useNavigate();
@@ -13,6 +12,7 @@ const Trending = () => {
 	useEffect(() => {
 		ProductFetch(setData)
 		console.log(data)
+
 	}, [])
 
 	const exclude_word = ["Slide"];
@@ -34,7 +34,7 @@ const Trending = () => {
 				img={sneaker.image}
 				price={Math.floor(sneaker.avg_price, 2)}
 				stars={sneaker.stars}
-				link_to={() => navigation(sneaker.sku)}
+				link_to={() => navigation(sneaker.id)}
 			/>)
 	})
 
