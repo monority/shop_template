@@ -76,6 +76,10 @@ input {
 	cursor: pointer;
 }
 
+.btn_uncolor{
+	border:var(--border_color01);
+	outline: none;
+}
 .btn_base {
 	border: var(--border_color01);
 	background-color: var(--highlight_color01);

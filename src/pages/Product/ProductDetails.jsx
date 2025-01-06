@@ -6,21 +6,23 @@ const ProductDetails = () => {
 	const [data, setData] = useState(null);
 	const [variantSize, setVariantSize] = useState([]);
 	const [stockSize, setStockSize] = useState([]);
-  
+	const [active_size, setActive_size] = useState(null);
+	const [active_color, setActive_color] = useState(null);
 	useEffect(() => {
-	  ProductById(setData, id);
+		ProductById(setData, id);
 	}, [id]);
-  
+
 	useEffect(() => {
-	  if (data && data.data && data.data.variants) {
-		setVariantSize(data.data.variants);
-		const sizes = data.data.variants.map(variant => variant.size);
-		setStockSize(sizes);
-		console.log(stockSize)
-	  }
+		if (data && data.data && data.data.variants) {
+			setVariantSize(data.data.variants);
+			const sizes = data.data.variants.map(variant => variant.size);
+			setStockSize(sizes);
+			console.log(stockSize)
+		}
 	}, [data]);
-  
-	
+
+	const filter_stock = stockSize?.sort((a, b) => a - b);
+
 	return (
 		<>
 			<div id="product_details">
@@ -50,14 +52,38 @@ const ProductDetails = () => {
 								<div className="element_list">
 									<>
 										{data?.data?.color?.split('/').map((color, index) => (
-										<p key={index} className={`${!index ? "active" : ""} default_btn`}>{color}</p>
-										))}	
+											<p key={index} className={`${active_color === color ? 'active_color' : ''} default_color`}
+												onClick={() => setActive_color(color)}>{color}</p>
+										))}
 									</>
+								</div>
+								<div className="element">
+									<p>Size <strong>EU Men</strong></p>
 								</div>
 								<div className="element_list">
 									<>
-										{stockSize.sort()}
+
+										{filter_stock?.map((item, index) => (
+											<p key={index} className={`${active_size === item ? 'active_size' : ''} default_size`}
+												onClick={() => setActive_size(item)}>{item}</p>
+										))}
+
 									</>
+								</div>
+								<div className="element">
+									<p>Size Guide</p>
+								</div>
+								<div className="element_button">
+									<button type="submit" className='btn btn_full btn_base'><svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44771 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11H11V8Z" fill="currentColor" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="currentColor" />
+									</svg>Add to Cart</button>
+									<button type="submit" className='btn btn_uncolor'><svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg></button>
+								</div>
+								<div className="element">
+									<p>Free delivery over 30$</p>
 								</div>
 							</div>
 						</div>
