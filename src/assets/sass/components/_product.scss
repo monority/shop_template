@@ -109,22 +109,6 @@
 		gap: var(--size_rem_8);
 	}
 
-	.wrapper_image {
-		display: flex;
-		flex-basis: 30%;
-		img {
-			width: fit-content;
-			height: fit-content;
-		}
-	}
-
-	.container_text {
-		display: flex;
-		flex-direction: column;
-		gap: var(--size_rem_4);
-		display: flex;
-		flex-basis: 70%;
-	}
 	.element_button{
 		display: flex;
 		width: 70%;
@@ -140,15 +124,33 @@
 	}
 	.container_details{
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		flex-basis: 30%;
 	}
 	.container_tab{
 		display: flex;
 		gap:var(--size_rem_4);
+	
 		.active_tab {
 			border-bottom: 0.1px solid black;
 			color : var(--text_color01);
 			transition: all 0.2s ease-in-out;
 		}
+	}
+	.container_right{
+		display: flex;
+		flex-direction: column;
+		gap: var(--size_rem_2);
+		flex-basis: 40%;
+	}
+	.container_left{
+		display: flex;
+		flex-direction: column;
+		gap: var(--size_rem_2);
+		flex-basis: 60%;	
+	}
+	img{
+		width: fit-content;
+		height: fit-content;
 	}
 }

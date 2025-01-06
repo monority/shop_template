@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { ProductById } from '../../queries/ProductFetch';
+import { reviews } from '../../temp/Reviews';
+import ReviewsTemplate from '../../components/global/ReviewsTemplate';
 const ProductDetails = () => {
 	const { id } = useParams();
 	const [data, setData] = useState(null);
@@ -24,7 +26,18 @@ const ProductDetails = () => {
 	}, [data]);
 
 	const filter_stock = stockSize?.sort((a, b) => a - b);
-	console.log(active_size)
+	const reviews_display = reviews.map((review) => {
+		return (
+			<ReviewsTemplate
+				key={review.id}
+				id={review.id}
+				message={review.message}
+				name={review.name}
+				date={review.date}
+			/>
+		);
+	});
+
 	return (
 		<>
 			<div id="product_details">
@@ -34,11 +47,11 @@ const ProductDetails = () => {
 							<p>{data?.data?.category} {">"} {data?.data?.brand}</p>
 						</div>
 						<div className="container_content">
-							<div className="wrapper_image">
+							<div className="container_left">
 								<img src={data?.data?.image} alt="" />
 							</div>
-							<div className="container_text w_100">
-								<div className="element_between w_100">
+							<div className="container_right">
+								<div className="element_between">
 									<p>{data?.data?.brand}</p>
 									<p className='text_color04'>{data?.data?.sku}</p>
 								</div>
@@ -49,7 +62,7 @@ const ProductDetails = () => {
 									<p>Reviews : </p>
 								</div>
 								<div className="element">
-									<h1>{Math.floor(data?.data?.avg_price, 2)} $</h1>
+									<h1>{data?.data?.avg_price?.toFixed(2)} $</h1>
 								</div>
 								<div className="element_list">
 									<>
@@ -89,24 +102,25 @@ const ProductDetails = () => {
 								</div>
 							</div>
 						</div>
-						<div className="container_details">
-							<div className="container_tab">
-								{arrayDetails.map((item, index) => {
-									return (
-										<p key={index} className={`${active_tab === item ? 'active_tab' : ''} default_tab`}
-											onClick={() => setActive_tab(item)}>{item}</p>
+						<div className="container_content">
+							<div className="container_left">
+								<div className="container_tab">
+									{arrayDetails.map((item, index) => {
+										return (
+											<p key={index} className={`${active_tab === item ? 'active_tab' : ''} default_tab`}
+												onClick={() => setActive_tab(item)}>{item}</p>
 
-									)
-								})}
-
-								<div className="wrapper_text">
-										<p>
-										
-
-										</p>
+										)
+									})}
 								</div>
+								<div className="container_text_detailed">
+									<div className="container_text_detailed">
+										{active_tab === "Reviews" && reviews_display}
+									</div>
+								</div>
+
 							</div>
-							<div className="container_stars">
+							<div className="container_right">
 								<h1>Stars</h1>
 							</div>
 						</div>
