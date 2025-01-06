@@ -8,6 +8,8 @@ const ProductDetails = () => {
 	const [stockSize, setStockSize] = useState([]);
 	const [active_size, setActive_size] = useState(null);
 	const [active_color, setActive_color] = useState(null);
+	const [active_tab, setActive_tab] = useState(null);
+	const arrayDetails = ["Reviews", "Details", "Discussion"]
 	useEffect(() => {
 		ProductById(setData, id);
 	}, [id]);
@@ -22,7 +24,7 @@ const ProductDetails = () => {
 	}, [data]);
 
 	const filter_stock = stockSize?.sort((a, b) => a - b);
-
+	console.log(active_size)
 	return (
 		<>
 			<div id="product_details">
@@ -47,7 +49,7 @@ const ProductDetails = () => {
 									<p>Reviews : </p>
 								</div>
 								<div className="element">
-									<h1>{data?.data?.avg_price} $</h1>
+									<h1>{Math.floor(data?.data?.avg_price, 2)} $</h1>
 								</div>
 								<div className="element_list">
 									<>
@@ -85,6 +87,27 @@ const ProductDetails = () => {
 								<div className="element">
 									<p>Free delivery over 30$</p>
 								</div>
+							</div>
+						</div>
+						<div className="container_details">
+							<div className="container_tab">
+								{arrayDetails.map((item, index) => {
+									return (
+										<p key={index} className={`${active_tab === item ? 'active_tab' : ''} default_tab`}
+											onClick={() => setActive_tab(item)}>{item}</p>
+
+									)
+								})}
+
+								<div className="wrapper_text">
+										<p>
+										
+
+										</p>
+								</div>
+							</div>
+							<div className="container_stars">
+								<h1>Stars</h1>
 							</div>
 						</div>
 					</div>
