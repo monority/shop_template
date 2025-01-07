@@ -1,11 +1,11 @@
 import React from 'react'
-import Newsletter from './Newsletter'
+import Newsletter from '../../pages/Home/Newsletter'
 const Footer = () => {
 	return (
 		<>
 			<footer id="footer">
 				<div className="lyt_container_small">
-					<div className="container">
+					<div className="container_row">
 						<div className="wrapper_title">
 							<p className='title_size01 text_color03'>Sneak<strong className='text_color02'>ara</strong>.</p>
 						</div>

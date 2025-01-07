@@ -12,13 +12,13 @@ const ProductCard = ({ img, title, colors, price, stars, type, link_to, descript
 				{Array(fullStars)
 					.fill(<FullStar />)
 					.map((star, index) => (
-						<span key={`full-${index}`} className="star-icon full-star">{star}</span>
+						<span key={`full-${index}`} className="star_icon full-star">{star}</span>
 					))}
-				{hasHalfStar && <span className="star-icon half-star"><HalfStar /></span>}
+				{hasHalfStar && <span className="star_icon half-star"><HalfStar /></span>}
 				{Array(emptyStars)
 					.fill(<EmptyStar />)
 					.map((star, index) => (
-						<span key={`empty-${index}`} className="star-icon empty-star">{star}</span>
+						<span key={`empty-${index}`} className="star_icon empty-star">{star}</span>
 					))}
 			</>
 		);

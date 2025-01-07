@@ -15,17 +15,18 @@ const ProductDetails = () => {
 	const [active_color, setActive_color] = useState(null);
 	const [active_tab, setActive_tab] = useState(null);
 	const arrayDetails = ["Reviews", "Details", "Discussion"];
-	let average = 0;
+	const [average, setAverage] = useState([]);
+
 	useEffect(() => {
 		ProductById(setData, id);
 	}, [id]);
 
 	useEffect(() => {
-		if (data && data.data && data.data.variants) {
-			setVariantSize(data.data.variants);
-			const sizes = data.data.variants.map(variant => variant.size);
+		if (data && data.data && data?.data?.variants) {
+			setVariantSize(data?.data?.variants);
+			const sizes = data?.data?.variants.map(variant => variant.size);
 			setStockSize(sizes);
-			console.log(stockSize)
+			// console.log(stockSize)
 		}
 	}, [data]);
 
@@ -36,24 +37,23 @@ const ProductDetails = () => {
 
 	const reviews_display = filteredReviews?.map((review) => {
 		const matchingRating = review.rating.find((rate) => rate.ref === data?.data?.sku);
-	  
+
 		return (
 		  <ReviewsTemplate
 			key={review.id}
 			id={review.id}
 			message={review.message}
 			name={review.name}
-			date={calculateDate(review.date)}
+			date={calculateDate(review?.date)}
 			mark={renderStars(matchingRating?.mark)} 
+			gender={review?.gender}
 		  />
 		);
 	  });
-	  
 
-	for (let i = 0; i < reviews.length; i++) {
-		average += reviews[i].rating / reviews.length;
-	}
-
+	
+	  const uniqueData = [...new Set(data?.data?.color)]; 
+	  console.log(uniqueData)
 	return (
 		<>
 			<div id="product_details">
@@ -64,7 +64,7 @@ const ProductDetails = () => {
 						</div>
 						<div className="container_content">
 							<div className="container_left">
-								<img src={data?.data?.image} alt="" />
+								<img src={data?.data?.image} alt="" className='img_product'/>
 							</div>
 							<div className="container_right">
 								<div className="element_between">
@@ -82,7 +82,7 @@ const ProductDetails = () => {
 								</div>
 								<div className="element_list">
 									<>
-										{data?.data?.color?.split('/').map((color, index) => (
+										{data?.data?.color.split('/').map((color, index) => (
 											<p key={index} className={`${active_color === color ? 'active_color' : ''} default_color`}
 												onClick={() => setActive_color(color)}>{color}</p>
 										))}

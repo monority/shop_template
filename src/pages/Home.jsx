@@ -3,7 +3,7 @@ import Trending from './Home/Trending'
 import Hero from './Home/Hero'
 import Reviews from './Home/Reviews'
 import About from './Home/About'
-import Newsletter from '../components/Footer/Newsletter'
+import Newsletter from './Home/Newsletter'
 const Home = () => {
 	return (
 		<>

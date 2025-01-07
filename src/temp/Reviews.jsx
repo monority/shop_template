@@ -11,7 +11,7 @@ export const reviews = [
 		priority: "High",
 		linkedto: "HQ4540",
 		rating: [
-			{ ref: "CT8012-104", mark: "5" },
+			{ ref: "CT8012-104", mark: "3" },
 			{ ref: "HQ1002", mark: "4" },
 		],
 	},

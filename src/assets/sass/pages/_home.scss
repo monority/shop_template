@@ -83,20 +83,21 @@
 
 }
 
-#about{
-	.wrapper_title{
+#about {
+	.wrapper_title {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 		flex-basis: 30%;
 	}
-	.wrapper_text{
+
+	.wrapper_text {
 		display: flex;
 		flex-basis: 70%;
 	}
 }
 
-#newsletter{
+#newsletter {
 	.bg_img_wrapper {
 		height: 35vh;
 		overflow: hidden;
@@ -131,11 +132,17 @@
 			color: var(--text_color01);
 		}
 	}
-
-	.element {
+	form{
 		display: flex;
-		gap: 2rem;
+		flex-direction: column;
+		gap: var(--size_rem_2);
+	}
+
+	.form_group {
 		position: relative;
+	}
+	button{
+		width: 100%;
 	}
 
 }
