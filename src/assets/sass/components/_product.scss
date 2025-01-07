@@ -146,11 +146,26 @@
 	.container_left{
 		display: flex;
 		flex-direction: column;
-		gap: var(--size_rem_2);
+		gap: var(--size_rem_4);
 		flex-basis: 60%;	
+	}
+	.container_text_detailed, #review .wrapper{
+		display: flex;
+		flex-direction: column;
+		gap: var(--size_rem_2);
 	}
 	img{
 		width: fit-content;
 		height: fit-content;
 	}
+	hr{
+		width: 100%;
+		opacity: 0.2;
+		border-top: 0.01px solid rgba(0, 0, 0, 0.1);
+	}
+	.wrapper_stars{
+		display: flex;
+		justify-content: space-between;
+	}
+	
 }

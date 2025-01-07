@@ -3,6 +3,9 @@ import { useParams } from 'react-router'
 import { ProductById } from '../../queries/ProductFetch';
 import { reviews } from '../../temp/Reviews';
 import ReviewsTemplate from '../../components/global/ReviewsTemplate';
+import { calculateDate } from '../../components/global/calculateDate';
+import { renderStars } from '../../components/global/Stars';
+
 const ProductDetails = () => {
 	const { id } = useParams();
 	const [data, setData] = useState(null);
@@ -11,7 +14,8 @@ const ProductDetails = () => {
 	const [active_size, setActive_size] = useState(null);
 	const [active_color, setActive_color] = useState(null);
 	const [active_tab, setActive_tab] = useState(null);
-	const arrayDetails = ["Reviews", "Details", "Discussion"]
+	const arrayDetails = ["Reviews", "Details", "Discussion"];
+	let average = 0;
 	useEffect(() => {
 		ProductById(setData, id);
 	}, [id]);
@@ -33,10 +37,15 @@ const ProductDetails = () => {
 				id={review.id}
 				message={review.message}
 				name={review.name}
-				date={review.date}
+				date={calculateDate(review.date)}
+				rating={renderStars(review.rating)}
 			/>
 		);
 	});
+
+	for (let i = 0; i < reviews.length; i++) {
+		average += reviews[i].rating / reviews.length;
+	}
 
 	return (
 		<>
@@ -121,7 +130,15 @@ const ProductDetails = () => {
 
 							</div>
 							<div className="container_right">
-								<h1>Stars</h1>
+								<div className="wrapper_title">
+									<h1>Stars</h1>
+								</div>
+								<div className="element_between">
+									<div className="stars">
+										{renderStars(average.toFixed(1))}
+									</div>
+									<p>{average}</p>
+								</div>
 							</div>
 						</div>
 					</div>
