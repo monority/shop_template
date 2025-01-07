@@ -9,27 +9,22 @@ import { renderStars } from '../../components/global/Stars';
 const ProductDetails = () => {
 	const { id } = useParams();
 	const [data, setData] = useState(null);
-	const [variantSize, setVariantSize] = useState([]);
 	const [stockSize, setStockSize] = useState([]);
 	const [active_size, setActive_size] = useState(null);
 	const [active_color, setActive_color] = useState([0]);
 	const [active_tab, setActive_tab] = useState(null);
-	const arrayDetails = ["Reviews", "Details", "Discussion"];
 	const [average, setAverage] = useState([]);
-	const set = [...new Set(data?.data?.color.split('/'))].join('/');
 	const [colors, setColors] = useState([]);
+	const arrayDetails = ["Reviews", "Details", "Discussion"];
+	const set = [...new Set(data?.data?.color.split('/'))].join('/');
+	const sizes = data?.data?.variants.map(variant => variant.size);
 
 	useEffect(() => {
 		ProductById(setData, id);
 	}, [id]);
 
 	useEffect(() => {
-		if (data && data.data && data?.data?.variants) {
-			setVariantSize(data?.data?.variants);
-			const sizes = data?.data?.variants.map(variant => variant.size);
-			setStockSize(sizes);
-			// console.log(stockSize)
-		}
+		setStockSize(sizes);
 	}, [data]);
 
 	const filter_stock = stockSize?.sort((a, b) => a - b);
@@ -41,19 +36,19 @@ const ProductDetails = () => {
 		const matchingRating = review.rating.find((rate) => rate.ref === data?.data?.sku);
 
 		return (
-		  <ReviewsTemplate
-			key={review.id}
-			id={review.id}
-			message={review.message}
-			name={review.name}
-			date={calculateDate(review?.date)}
-			mark={renderStars(matchingRating?.mark)} 
-			gender={review?.gender}
-		  />
+			<ReviewsTemplate
+				key={review.id}
+				id={review.id}
+				message={review.message}
+				name={review.name}
+				date={calculateDate(review?.date)}
+				mark={renderStars(matchingRating?.mark)}
+				gender={review?.gender}
+			/>
 		);
-	  });
+	});
 
-	
+
 	return (
 		<>
 			<div id="product_details">
@@ -64,7 +59,7 @@ const ProductDetails = () => {
 						</div>
 						<div className="container_content">
 							<div className="container_left">
-								<img src={data?.data?.image} alt="" className='img_product'/>
+								<img src={data?.data?.image} alt="" className='img_product' />
 							</div>
 							<div className="container_right">
 								<div className="element_between">
