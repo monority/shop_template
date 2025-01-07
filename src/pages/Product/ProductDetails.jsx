@@ -30,18 +30,25 @@ const ProductDetails = () => {
 	}, [data]);
 
 	const filter_stock = stockSize?.sort((a, b) => a - b);
-	const reviews_display = reviews.map((review) => {
+	const filteredReviews = reviews.filter((review) =>
+		review.rating.some((rating) => rating?.ref === data?.data?.sku)
+	);
+
+	const reviews_display = filteredReviews?.map((review) => {
+		const matchingRating = review.rating.find((rate) => rate.ref === data?.data?.sku);
+	  
 		return (
-			<ReviewsTemplate
-				key={review.id}
-				id={review.id}
-				message={review.message}
-				name={review.name}
-				date={calculateDate(review.date)}
-				rating={renderStars(review.rating)}
-			/>
+		  <ReviewsTemplate
+			key={review.id}
+			id={review.id}
+			message={review.message}
+			name={review.name}
+			date={calculateDate(review.date)}
+			mark={renderStars(matchingRating?.mark)} 
+		  />
 		);
-	});
+	  });
+	  
 
 	for (let i = 0; i < reviews.length; i++) {
 		average += reviews[i].rating / reviews.length;
@@ -135,7 +142,7 @@ const ProductDetails = () => {
 								</div>
 								<div className="element_between">
 									<div className="stars">
-										{renderStars(average.toFixed(1))}
+										{/* {renderStars(average.toFixed(1))} */}
 									</div>
 									<p>{average}</p>
 								</div>
