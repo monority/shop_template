@@ -18,7 +18,7 @@ const ProductDetails = () => {
 	const arrayDetails = ["Reviews", "Details", "Discussion"];
 	const set = [...new Set(data?.data?.color.split('/'))].join('/');
 	const sizes = data?.data?.variants.map(variant => variant.size);
-
+	console.log(sizes)
 	useEffect(() => {
 		ProductById(setData, id);
 	}, [id]);
