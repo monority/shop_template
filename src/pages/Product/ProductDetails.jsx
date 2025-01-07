@@ -12,10 +12,12 @@ const ProductDetails = () => {
 	const [variantSize, setVariantSize] = useState([]);
 	const [stockSize, setStockSize] = useState([]);
 	const [active_size, setActive_size] = useState(null);
-	const [active_color, setActive_color] = useState(null);
+	const [active_color, setActive_color] = useState([0]);
 	const [active_tab, setActive_tab] = useState(null);
 	const arrayDetails = ["Reviews", "Details", "Discussion"];
 	const [average, setAverage] = useState([]);
+	const set = [...new Set(data?.data?.color.split('/'))].join('/');
+	const [colors, setColors] = useState([]);
 
 	useEffect(() => {
 		ProductById(setData, id);
@@ -52,8 +54,6 @@ const ProductDetails = () => {
 	  });
 
 	
-	  const uniqueData = [...new Set(data?.data?.color)]; 
-	  console.log(uniqueData)
 	return (
 		<>
 			<div id="product_details">
@@ -82,8 +82,8 @@ const ProductDetails = () => {
 								</div>
 								<div className="element_list">
 									<>
-										{data?.data?.color.split('/').map((color, index) => (
-											<p key={index} className={`${active_color === color ? 'active_color' : ''} default_color`}
+										{set.split('/').map((color, index) => (
+											<p key={index} className={`${active_color === color ? 'active_color' : ''}  default_color`}
 												onClick={() => setActive_color(color)}>{color}</p>
 										))}
 									</>
