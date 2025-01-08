@@ -2,18 +2,45 @@
 
 #home {
 	margin-top: 10rem;
-	#trending{
+
+	#trending {
 		.container {
 			display: flex;
 			gap: var(--size_rem_8);
 			justify-content: space-between;
-		  }
-		  
-		  .wrapper {
+		}
+
+		.wrapper {
 			display: flex;
 			flex-basis: calc(50% - var(--size_rem_8));
 			flex-direction: column;
 			gap: var(--size_rem_2);
-		  }
+		}
+	}
+
+	#branding {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	#about{
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	}
+	#newsletter{
+		.wrapper_image_bg{
+			position: absolute;
+			height: 100%;
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }

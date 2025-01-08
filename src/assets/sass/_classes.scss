@@ -43,7 +43,9 @@ font-size: var(--title_size01);
 	font-weight: 400;
 	font-style: normal;
 }
-
+.relative{
+	position: relative;
+}
 h1,
 h2,
 h3,
@@ -112,4 +114,7 @@ h2 {
 
 .f_basis100 {
     flex-basis: 100%;
+}
+.flex{
+	display: flex;
 }

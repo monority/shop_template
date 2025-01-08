@@ -1,3 +1,11 @@
+@use './variables' as v;
+.col {
+	position: relative;
+	flex : 1 0 100%;
+	@media screen and (min-width : v.$lg-breakpoint ) {
+		flex: 1 1 0%;
+	}
+}
 input[type="search"] {
 	background-color: var(--bg_color02);
 	color: var(--text_color01);
@@ -89,7 +97,11 @@ input[type="text"] {
 	object-fit: cover;
 	height: 100%;
 }
-
+.element_caption{
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
+}
 .element_relative {
 	display: flex;
 	position: relative;
@@ -103,4 +115,7 @@ input[type="text"] {
 	color:var(--text_color03);
 	padding: var(--size_rem_1);
 	border-radius: var(--size_rem_05);
+}
+.full_color{
+	background-color: var(--bg_color02);
 }

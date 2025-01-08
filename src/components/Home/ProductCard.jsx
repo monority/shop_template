@@ -6,7 +6,6 @@ const ProductCard = ({ img, title, colors, price, stars, type, link_to, descript
 		const fullStars = Math.floor(stars);
 		const hasHalfStar = stars % 1 !== 0;
 		const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-	const set = [...new Set(data?.data?.color.split('/'))].join('/');
 
 		return (
 			<>

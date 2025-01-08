@@ -44,8 +44,7 @@ const Trending = () => {
 		<>
 			<section id="trending">
 				<div className="lyt_container_small">
-
-					<div className="">
+					<div>
 						<div className="wrapper">
 							<h2 className='text_center font_family_Geist'>Trending</h2>
 						</div>
