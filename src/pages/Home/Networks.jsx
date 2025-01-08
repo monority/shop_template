@@ -3,11 +3,11 @@ import React from 'react'
 const Networks = () => {
 	return (
 		<>
-			<div id="network">
+			<section id="network">
 				<div className="container">
 
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }

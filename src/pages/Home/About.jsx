@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
 	return (
 		<>
-			<div id="about">
+			<section id="about">
 				<div className="container">
 					<div className="container_fullcolor">
 						<div className="lyt_container container_row">
@@ -20,7 +20,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }

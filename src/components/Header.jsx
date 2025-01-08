@@ -23,23 +23,23 @@ const Header = () => {
 	return (
 		<>
 			<header id="header" className={active ? "transparent" : "color"}>
-				<div className="lyt_container">
-					<div className="container">
-						<div className="element" onClick={() => navigate("/")}>
+				<div className="lyt_container w_100">
+					<div className="container_between">
+						<div className="element cursor_pointer" onClick={() => navigate("/")}>
 							<p className='title_size01'>Sneak<strong className='text_color02'>ara</strong>.</p>
 						</div>
-						<div className="element">
-							<input type="search" className='input_base' name="search_header" id="search_header" value="" />
+						<div className="element_relative">
+							<input type="search" className='input_default' name="search_header" id="search_header" value="" />
 
-							<label htmlFor="search_header">
+							<label htmlFor="search_header" className='label_custom'>
 								<svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M16.6725 16.6412L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 								</svg>Search...
 							</label>
 						</div>
-						<div className="menu_wrapper">
-							<li className="menu_element"></li>
-							<li className="menu_element"><svg width="2.8rem" height="2.8rem" viewBox="0 0 512 512" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+						<div className="element_row">
+							<li className="element"></li>
+							<li className="element"><svg className="cursor_pointer" width="2.8rem" height="2.8rem" viewBox="0 0 512 512" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
 								<g id="Layer_1" />
 								<g id="Layer_2">
 									<g>
@@ -49,10 +49,10 @@ const Header = () => {
 									</g>
 								</g>
 							</svg></li>
-							<li className="menu_element">
-								<svg width="2.8rem" height="2.8rem" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M60.53,18.71A2,2,0,0,0,59,18H48.85A15,15,0,0,0,34,5H30A15,15,0,0,0,15.15,18H5a2,2,0,0,0-1.53.71A2,2,0,0,0,3,20.35l5.33,30.3A6.51,6.51,0,0,0,14.77,56H49.23a6.51,6.51,0,0,0,6.41-5.36L61,20.35A2,2,0,0,0,60.53,18.71ZM30,9h4a11,11,0,0,1,10.81,9H19.19A11,11,0,0,1,30,9ZM51.71,49.94A2.52,2.52,0,0,1,49.23,52H14.77a2.5,2.5,0,0,1-2.47-2L7.38,22H56.62Z" fill="currentColor" /></svg>
+							<li className="element">
+								<svg width="2.8rem" height="2.8rem" className="cursor_pointer" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M60.53,18.71A2,2,0,0,0,59,18H48.85A15,15,0,0,0,34,5H30A15,15,0,0,0,15.15,18H5a2,2,0,0,0-1.53.71A2,2,0,0,0,3,20.35l5.33,30.3A6.51,6.51,0,0,0,14.77,56H49.23a6.51,6.51,0,0,0,6.41-5.36L61,20.35A2,2,0,0,0,60.53,18.71ZM30,9h4a11,11,0,0,1,10.81,9H19.19A11,11,0,0,1,30,9ZM51.71,49.94A2.52,2.52,0,0,1,49.23,52H14.77a2.5,2.5,0,0,1-2.47-2L7.38,22H56.62Z" fill="currentColor" /></svg>
 							</li>
-							<li className="menu_element"><DisplayMode /></li>
+							<li className="element"><DisplayMode /></li>
 						</div>
 					</div>
 				</div>

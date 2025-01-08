@@ -14,6 +14,7 @@ const Trending = () => {
 		console.log(data)
 
 	}, [])
+	const set = [...new Set(data?.data?.color.split('/'))].join('/');
 
 	const exclude_word = ["Slide"];
 
@@ -30,7 +31,7 @@ const Trending = () => {
 				id={sneaker.id}
 				title={sneaker.title}
 				type={sneaker.metadata.category}
-				colors={sneaker.color}
+				colors={[...new Set(sneaker.color.split('/'))].join('/')}
 				description={sneaker.description}
 				img={sneaker.image}
 				price={Math.floor(sneaker.avg_price, 2)}
@@ -43,14 +44,13 @@ const Trending = () => {
 		<>
 			<section id="trending">
 				<div className="lyt_container_small">
-					<div className="container">
-						<div className="container_gap">
-							<div className="wrapper">
-								<h2 className='text_center font_family_lato'>Trending</h2>
-							</div>
-							<div className="wrapper_layout_center flex_wrap">
-								{display_sneakers}
-							</div>
+
+					<div className="">
+						<div className="wrapper">
+							<h2 className='text_center font_family_Geist'>Trending</h2>
+						</div>
+						<div className="container flex_wrap">
+							{display_sneakers}
 						</div>
 					</div>
 				</div>

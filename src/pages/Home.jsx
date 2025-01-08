@@ -7,7 +7,7 @@ import Newsletter from './Home/Newsletter'
 const Home = () => {
 	return (
 		<>
-			<div id="home">
+			<div id="home" className="container_column_xl">
 				<Hero />
 				<Trending />
 				<Reviews />

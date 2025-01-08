@@ -13,33 +13,22 @@ const Hero = ({ video, img, text_title, title }) => {
 		<>
 			<section id="hero">
 				<div className="lyt_container">
-					<div className="container">
-						{/* <div className="video_container">
-						<div className="video_figure">
-							<video src={video} autoPlay loop muted></video>
-						</div>
-					</div> */}
-						<div className="content_container">
-							<div className="container_gap">
-								<div className="element_text">
-									<h1 className='font_family_lato'>{title}</h1>
+					<div className="container_default">
+						<div className="container_column">
+							<div className="element">
+								<h1 className='font_family_Geist'>{title}</h1>
 
-								</div>
-								<div className="element_text">
-									<p>{text_title}</p>
-								</div>
-								<div className="element_btn">
-									<button className='btn btn_base'>Browse Collections</button>
-									<button className='btn btn_base_highlight'>Products on sale</button>
-								</div>
 							</div>
-							<div className="wrapper_img">
-								<div className="container_img">
-									<div className="figure_img">
-										<img src={img} alt="" />
-									</div>
-								</div>
+							<div className="element">
+								<p>{text_title}</p>
 							</div>
+							<div className="element_row">
+								<button className='btn btn_base'>Browse Collections</button>
+								<button className='btn btn_base_highlight'>Products on sale</button>
+							</div>
+						</div>
+						<div className="element">
+							<img src={img} className='image_default' alt="" />
 						</div>
 					</div>
 				</div>

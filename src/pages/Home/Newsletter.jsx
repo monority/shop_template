@@ -3,7 +3,7 @@ import React from 'react'
 const Newsletter = () => {
 	return (
 		<>
-			<div id='newsletter'>
+			<section id='newsletter'>
 				<div className="wrapper">
 					<div className="bg_img_wrapper">
 						<img src="\img\bg_big01.jpg" alt="" />
@@ -31,7 +31,7 @@ const Newsletter = () => {
 					</div>
 
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }
