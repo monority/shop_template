@@ -5,10 +5,12 @@ import Header from './components/Header'
 import SubNav from './components/SubNav'
 import Footer from './components/Footer/Footer'
 import ProductDetails from './pages/Product/ProductDetails'
+import AppContainer from './components/AppContainer'
 
 const Root = () => {
 	return (
 		<BrowserRouter>
+			<AppContainer>
 				<Header />
 				<SubNav></SubNav>
 				<Routes>
@@ -16,6 +18,7 @@ const Root = () => {
 					<Route exact path="/product/:id" element={<ProductDetails />} />
 				</Routes>
 				<Footer></Footer>
+			</AppContainer>
 		</BrowserRouter>
 	)
 }

@@ -7,7 +7,7 @@ import Branding from './Home/Branding'
 const Home = () => {
 	return (
 		<>
-			<div id="home" className="container_column_xl">
+			<div id="home" className='app_container'>
 				<Hero />
 				<Trending />
 				<Branding />

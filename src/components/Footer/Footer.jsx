@@ -5,11 +5,11 @@ const Footer = () => {
 		<>
 			<footer id="footer">
 				<div className="lyt_container_small">
-					<div className="container_row">
-						<div className="wrapper_title">
+					<div className="container_responsive">
+						<div className="wrapper">
 							<p className='title_size01 text_color03'>Sneak<strong className='text_color02'>ara</strong>.</p>
 						</div>
-						<div className="wrapper_layout">
+						<div className="container_responsive">
 							<div className="element_list">
 								<div className="element_title">
 									<h3 className='text_color04'>Help</h3>
