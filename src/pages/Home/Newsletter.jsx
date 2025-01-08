@@ -20,7 +20,7 @@ const Newsletter = () => {
 								</label>
 							</div>
 
-							<button type="submit" className=' btn_base'>Submit</button>
+							<button type="submit" className=' btn_base w_100'>Submit</button>
 						</form>
 					</div>
 				</div>

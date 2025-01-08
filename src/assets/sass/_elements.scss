@@ -102,7 +102,7 @@ input[type="text"] {
 	bottom: 2rem;
 	left: 2rem;
 }
-.element_relative {
+.form_element {
 	display: flex;
 	position: relative;
 }
@@ -118,4 +118,10 @@ input[type="text"] {
 }
 .full_color{
 	background-color: var(--bg_color02);
+}
+
+.form_group{
+	display: flex;
+	flex-direction: column;
+	gap:var(--size_rem_15);
 }

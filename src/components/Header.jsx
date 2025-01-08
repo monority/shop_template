@@ -28,7 +28,7 @@ const Header = () => {
 						<div className="element cursor_pointer" onClick={() => navigate("/")}>
 							<p className='title_size01'>Sneak<strong className='text_color02'>ara</strong>.</p>
 						</div>
-						<div className="element_relative">
+						<div className="form_element">
 							<input type="search" className='input_default' name="search_header" id="search_header" value="" />
 
 							<label htmlFor="search_header" className='label_custom'>
