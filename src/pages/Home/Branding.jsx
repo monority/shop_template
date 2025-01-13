@@ -3,7 +3,7 @@ import React from 'react'
 const Branding = () => {
 	return (
 		<>
-			<section id="branding">
+			<section id="branding" className='linear_color'>
 
 				<div className="container_responsive">
 					<div className="element col">

@@ -117,7 +117,10 @@ input[type="text"] {
 .full_color{
 	background-color: var(--bg_color02);
 }
-
+.linear_color {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--bg_color02) 100%);
+}
 .form_group{
 	display: flex;
 	flex-direction: column;

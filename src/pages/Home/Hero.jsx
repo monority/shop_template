@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router';
 import Trending from './Trending';
+import HorizontalScroller from '../../temp/ScrollText';
 
 const Hero = ({ video, img, text_title, title }) => {
 	const location = useLocation();
