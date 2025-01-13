@@ -28,6 +28,36 @@
 .title_size01{
 font-size: var(--title_size01);
 }
+.text_size01{
+	font-size: var(--text_size01);
+}
+.text_size02{
+	font-size: var(--text_size02);
+}
+.text_size03{
+	font-size: var(--text_size03);
+}
+.text_size04{
+	font-size: var(--text_size04);
+}
+.text_size05{
+	font-size: var(--text_size05);
+}
+.text_size06{
+	font-size: var(--text_size06);
+}
+.text_size07{
+	font-size: var(--text_size07);
+}
+.text_size08{
+	font-size: var(--text_size08);
+}
+.text_size09{
+	font-size: var(--text_size09);
+}
+.text_size10{
+	font-size: var(--text_size10);
+}
 
 .font_family_geist {
 	font-family: "Geist", serif;
@@ -117,4 +147,8 @@ h2 {
 }
 .flex{
 	display: flex;
+}
+
+.upper{
+	text-transform: uppercase;
 }

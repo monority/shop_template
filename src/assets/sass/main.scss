@@ -71,11 +71,17 @@
 	gap: var(--size_rem_16);
 }
 
-.wrapper_default{
+.wrapper_default_column{
 	display: flex;
 	flex-direction: column;
 	gap: var(--size_rem_2);
 }
+.wrapper_default_row{
+	display: flex;
+	flex-direction: row;
+	gap:var(--size_rem_2);
+}
+
 .element_centered{
 	display: flex;
 	justify-content: center;

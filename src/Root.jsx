@@ -17,8 +17,8 @@ const Root = () => {
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/product/:id" element={<ProductDetails />} />
 				</Routes>
-				<Footer></Footer>
 			</AppContainer>
+			<Footer></Footer>
 		</BrowserRouter>
 	)
 }
