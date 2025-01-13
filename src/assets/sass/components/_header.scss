@@ -2,7 +2,6 @@ header {
 	z-index:1;
 	height: 12vh;
 	background: transparent;
-	position: sticky;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -12,6 +11,30 @@ header {
 	.menu_wrapper{
 		display: flex;
 		column-gap: var(--size_rem_25);
+	}
+	.wrapper_default_row{
+		height: fit-content;
+		justify-content: center;
+		align-items: center;
+	}
+	.wrapper_default_row:nth-child(1){
+		background-color: var(--bg_color02);
+		border: var(--border_color03);
+		max-height:3.6rem;
+		border-radius: var(--size_rem_1);
+		.unactive{
+			background-color: var(--bg_color02);
+			border-radius: var(--size_rem_1);
+			padding: var(--size_rem_05);
+			transition: background-color 0.3s ease-in-out;
+		}
+		.active{
+			background-color: var(--bg_color01);
+			border-radius: var(--size_rem_1);
+			padding: var(--size_rem_05);
+			border: var(--border_color04);
+			transition: background-color 0.3s ease-in-out;
+		}
 	}
 }
 

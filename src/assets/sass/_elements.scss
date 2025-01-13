@@ -9,6 +9,7 @@
 input[type="search"] {
 	background-color: var(--bg_color02);
 	color: var(--text_color01);
+	font-size: var(--text_size01);
 }
 
 input[type="text"] {
@@ -37,6 +38,7 @@ input[type="text"] {
 	transform: translateY(-50%);
 	pointer-events: none;
 	transition: 0.3s;
+	font-size: var(--text_size01);
 }
 
 .input_default:focus ~ label {

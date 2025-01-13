@@ -55,6 +55,16 @@
 	flex-direction: row;
 	}
 }
+.container_column_xs{
+	display: flex;
+	flex-direction: column;
+	gap: var(--size_rem_1);
+}
+.container_column_small{
+	display: flex;
+	flex-direction: column;
+	gap: var(--size_rem_2);
+}
 .container_column{
 	display: flex;
 	flex-direction: column;
@@ -70,6 +80,8 @@
 	flex-direction: column;
 	gap: var(--size_rem_16);
 }
+
+
 
 .wrapper_default_column{
 	display: flex;

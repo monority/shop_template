@@ -58,7 +58,12 @@ font-size: var(--title_size01);
 .text_size10{
 	font-size: var(--text_size10);
 }
-
+.j_center{
+	justify-content: center;
+}
+.a_center{
+	align-items: center;
+}
 .font_family_geist {
 	font-family: "Geist", serif;
 	font-optical-sizing: auto;
@@ -105,7 +110,9 @@ h2 {
 .w_100{
 	width: var(--stg_100);
 }
-
+.h_100{
+	height: var(--stg_100);
+}
 .f_basis10 {
     flex-basis: 10%;
 }
@@ -151,4 +158,10 @@ h2 {
 
 .upper{
 	text-transform: uppercase;
+}
+.padding_default{
+	padding-top: 0.25rem;
+	padding-bottom : 0.25rem;
+	padding-left:0.5rem;
+	padding-right:0.5rem;
 }
