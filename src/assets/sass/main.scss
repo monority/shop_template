@@ -104,7 +104,11 @@
 	flex-direction: row;
 	gap: var(--size_rem_2);
 }
-
+.wrapper_centered{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .element_centered {
 	display: flex;
 	justify-content: center;
