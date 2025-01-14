@@ -3,27 +3,19 @@ import ProductCard from '../../components/Home/ProductCard'
 import { useEffect, useState } from 'react'
 import { ProductFetch } from '../../queries/ProductFetch'
 import { useNavigate } from 'react-router'
-const Trending = () => {
+const Trending = ({ data_handle }) => {
 	const [data, setData] = useState([]);
 	const navigate = useNavigate();
 	const navigation = (id) => {
 		navigate(`product/${id}`, { replace: true })
 	}
 	useEffect(() => {
-		ProductFetch(setData)
-		console.log(data)
-
-	}, [])
-	const set = [...new Set(data?.data?.color.split('/'))].join('/');
-
-	const exclude_word = ["Slide"];
-
+		setData(data_handle)
+	}, [data_handle])
+	const exclude_word = ["Slide"]; // * EXCLUDE SLIDE SNEAKERS
 	const filtered_sneakers = data.filter(sneaker =>
 		sneaker.gender === "male" && !exclude_word.some(word => sneaker.title.includes(word))
 	);
-
-
-
 	const display_sneakers = filtered_sneakers.map(sneaker => {
 		return (
 			<ProductCard

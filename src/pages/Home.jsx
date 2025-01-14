@@ -4,16 +4,21 @@ import Hero from './Home/Hero'
 import About from './Home/About'
 import Newsletter from './Home/Newsletter'
 import Branding from './Home/Branding'
-import HorizontalScroller from '../temp/ScrollText'
-
+import { useEffect, useState } from 'react'
+import { ProductFetch } from '../queries/ProductFetch'
 const Home = () => {
+	const [data, setData] = useState([]);
+	useEffect(() => {
+		ProductFetch(setData)
+		console.log(data)
+
+	}, [])
 	return (
 		<>
 			<div id="home">
 				<div className="app_container">
-					<Hero />
-					<HorizontalScroller></HorizontalScroller>
-					<Trending />
+					<Hero data_handle={data}/>
+					<Trending data_handle={data} />
 					<Branding />
 				</div>
 				<About />

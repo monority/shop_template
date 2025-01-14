@@ -1,7 +1,19 @@
 @use "../variables" as v;
 
 #home {
-
+	#hero{
+		.wrapper_box{
+			display: flex;
+			align-items: center;
+		}
+		.element_box{
+			overflow: scroll;
+			display: flex;
+			user-select: none;
+			width: 400px;
+			height: 150px;
+		}
+	}
 
 	#trending {
 		.container {

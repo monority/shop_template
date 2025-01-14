@@ -51,11 +51,12 @@ input[type="text"] {
 
 
 .btn {
-	border-radius: var(--size_rem_05);
-	padding: var(--size_rem_15);
-	font-size: var(--size_rem_15);
+	border-radius: var(--size_rem_1);
+	padding: var(--size_rem_05);
+	font-size:var(--text_size01);
 	font-weight: bold;
 	cursor: pointer;
+	flex : 1 1 100%;
 }
 
 .btn_uncolor {
