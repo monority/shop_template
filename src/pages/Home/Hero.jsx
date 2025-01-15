@@ -6,7 +6,7 @@ import { renderStars } from '../../components/global/Stars';
 const Hero = ({ text_title, title }) => {
 	const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
-	title = `Trendy shoes of luxury \n Elevate Your Every Step – Where Style Meets Comfort.`
+	title = `Trendy shoes of luxury Elevate Your Every Step – Where Style Meets Comfort`
 	text_title = "You will find all the sneakers trending now, available in a limited time. We gathering our product from famous brands and independant creators."
 	const currentReview = reviews[currentReviewIndex];
 	const averageRating = reviews?.reduce((sum, review) => sum + review.rating, 0) / reviews?.length;
@@ -18,7 +18,7 @@ const Hero = ({ text_title, title }) => {
 					<div className="container_between">
 						<div className="container_column f_basis50">
 							<div className="element">
-								<h1 className='font_family_Geist'>{title}</h1>
+								<h1 className='font_family_Geist text_center'>Trendy shoes of luxury <br /> Elevate Your Every Step <br /> Where Style Meets Comfort</h1>
 							</div>
 							<div className="element">
 								<p>{text_title}</p>
@@ -38,6 +38,8 @@ const Hero = ({ text_title, title }) => {
 									average={averageRating}
 									review_total={reviews.length}
 									stars={renderStars(averageRating)}
+									title={currentReview.title}
+									
 								/>
 								<div className="element_row">
 									<span className='arrow_btn' onClick={() => setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length)}>
