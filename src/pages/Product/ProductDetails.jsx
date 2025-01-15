@@ -14,7 +14,6 @@ const ProductDetails = () => {
 	const [active_color, setActive_color] = useState([0]);
 	const [active_tab, setActive_tab] = useState(null);
 	const [average, setAverage] = useState([]);
-	const [colors, setColors] = useState([]);
 	const arrayDetails = ["Reviews", "Details", "Discussion"];
 	const set = [...new Set(data?.data?.color.split('/'))].join('/');
 	const sizes = data?.data?.variants.map(variant => variant.size);

@@ -168,3 +168,30 @@ h2 {
 .space_between{
 	justify-content: space-between;
 }
+.gap05{
+	gap:var(--size_rem_05);
+}
+.gap1{
+	gap:var(--size_rem_1);
+}
+.gap15{
+	gap:var(--size_rem_15);
+}
+.gap2{
+	gap:var(--size_rem_2);
+}
+.gap25{
+	gap:var(--size_rem_25);
+}
+.gap3{
+	gap:var(--size_rem_3);
+}
+.gap35{
+	gap:var(--size_rem_35);
+}
+.gap4{
+	gap:var(--size_rem_4);
+}
+.gap12{
+	gap:12rem;
+}

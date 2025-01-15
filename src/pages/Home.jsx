@@ -9,15 +9,13 @@ import { ProductFetch } from '../queries/ProductFetch'
 const Home = () => {
 	const [data, setData] = useState([]);
 	useEffect(() => {
-		ProductFetch(setData)
-		console.log(data)
-
+		ProductFetch(setData);
 	}, [])
 	return (
 		<>
 			<div id="home">
 				<div className="app_container">
-					<Hero data_handle={data}/>
+					<Hero data_handle={data} />
 					<Trending data_handle={data} />
 					<Branding />
 				</div>
