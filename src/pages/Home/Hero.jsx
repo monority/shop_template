@@ -6,7 +6,6 @@ import { renderStars } from '../../components/global/Stars';
 const Hero = ({ text_title, title }) => {
 	const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
-	title = `Trendy shoes of luxury Elevate Your Every Step – Where Style Meets Comfort`
 	text_title = "You will find all the sneakers trending now, available in a limited time. We gathering our product from famous brands and independant creators."
 	const currentReview = reviews[currentReviewIndex];
 	const averageRating = reviews?.reduce((sum, review) => sum + review.rating, 0) / reviews?.length;

@@ -28,12 +28,11 @@
 		.container {
 			display: flex;
 			gap: var(--size_rem_8);
-			justify-content: space-between;
 		}
 
 		.wrapper {
 			display: flex;
-			flex-basis: calc(50% - var(--size_rem_8));
+			flex-basis: calc(33% - var(--size_rem_8));
 			flex-direction: column;
 			gap: var(--size_rem_2);
 		}
