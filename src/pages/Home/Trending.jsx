@@ -10,8 +10,8 @@ const Trending = ({ data_handle }) => {
 	const navigation = (id) => {
 		navigate(`product/${id}`, { replace: true })
 	}
-
-	const display_sneakers = data.map(sneaker => {
+	const filter_sneakers = data.slice(0, 8).filter(item => item.isTrending === true);
+	const display_sneakers = filter_sneakers.map(sneaker => {
 		return (
 			<ProductCard
 				key={sneaker.id}
@@ -30,7 +30,7 @@ const Trending = ({ data_handle }) => {
 		<>
 			<section id="trending">
 				<div className="lyt_container">
-					<div>
+					<div className='container_column_small'>
 						<div className="wrapper">
 							<h2 className='text_center font_family_Geist'>Trending</h2>
 						</div>

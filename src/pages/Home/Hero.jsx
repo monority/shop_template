@@ -68,6 +68,14 @@ const Hero = ({ text_title, title }) => {
 
 						</div>
 					</div>
+					<div className="container_between">
+						<div className="wrapper f_basis50">
+							<img src="/hero.png" alt="" />
+						</div>
+						<div className="wrapper f_basis50">
+							<h1 className='font_family_bebas title_size10'>Sneakara</h1>
+						</div>
+					</div>
 				</div>
 			</section >
 		</>

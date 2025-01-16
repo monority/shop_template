@@ -27,14 +27,15 @@
 	#trending {
 		.container {
 			display: flex;
-			gap: var(--size_rem_8);
+			gap: var(--size_rem_2);
 		}
+
 
 		.wrapper {
 			display: flex;
 			flex-basis: calc(33% - var(--size_rem_8));
 			flex-direction: column;
-			gap: var(--size_rem_2);
+			gap: var(--size_rem_1);
 		}
 	}
 

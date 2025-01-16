@@ -96,9 +96,10 @@ input[type="text"] {
 .image_card{
 	display: block;
 	margin: auto;
-	width: max(20vw, 30rem);
+	width: max(25vw, 30rem);
 	object-fit: cover;
 	height: 100%;
+	padding: 8rem;
 }
 
 .form_element {

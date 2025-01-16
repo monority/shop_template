@@ -1,7 +1,7 @@
 export const data = [
 	{
 	  id: 1,
-	  image	: "img/img_trending/trending01.png",
+	  image: "img/img_trending/trending01.png",
 	  title: "Adidas Ultra Boost",
 	  text: "Yes",
 	  price: "180",
@@ -9,6 +9,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Black/White",
 	  description: "High-performance running shoes designed for comfort and durability.",
+	  category: "Running"
 	},
 	{
 	  id: 2,
@@ -20,6 +21,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Red/Black",
 	  description: "Stylish sneakers with excellent cushioning for everyday wear.",
+	  category: "Lifestyle"
 	},
 	{
 	  id: 3,
@@ -31,6 +33,7 @@ export const data = [
 	  isTrending: false,
 	  colors: "Blue/Gray",
 	  description: "Lightweight and breathable, perfect for active lifestyles.",
+	  category: "Training"
 	},
 	{
 	  id: 4,
@@ -42,6 +45,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "White/Orange",
 	  description: "Innovative design with energy-returning soles for optimal performance.",
+	  category: "Running"
 	},
 	{
 	  id: 5,
@@ -53,6 +57,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Black/Red",
 	  description: "A timeless classic that never goes out of style.",
+	  category: "Casual"
 	},
 	{
 	  id: 6,
@@ -64,10 +69,11 @@ export const data = [
 	  isTrending: false,
 	  colors: "Gray/White",
 	  description: "Perfect for skateboarding and casual outings.",
+	  category: "Skateboarding"
 	},
 	{
 	  id: 7,
-	  image: "img/img_trending/trending7.png",
+	  image: "img/img_trending/trending07.png",
 	  title: "New Balance 990",
 	  text: "Yes",
 	  price: "170",
@@ -75,6 +81,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Navy/Gray",
 	  description: "Premium quality sneakers with exceptional arch support.",
+	  category: "Walking"
 	},
 	{
 	  id: 8,
@@ -86,6 +93,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Black/Blue",
 	  description: "Advanced cushioning for high-impact activities.",
+	  category: "Training"
 	},
 	{
 	  id: 9,
@@ -97,6 +105,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Red/White",
 	  description: "Iconic basketball sneakers with a bold design.",
+	  category: "Basketball"
 	},
 	{
 	  id: 10,
@@ -108,6 +117,7 @@ export const data = [
 	  isTrending: false,
 	  colors: "White/Green",
 	  description: "Designed for long-distance runners with excellent support.",
+	  category: "Running"
 	},
 	{
 	  id: 11,
@@ -119,6 +129,7 @@ export const data = [
 	  isTrending: false,
 	  colors: "Black/Yellow",
 	  description: "Engineered for speed and responsiveness on the track.",
+	  category: "Track"
 	},
 	{
 	  id: 12,
@@ -130,6 +141,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Blue/Orange",
 	  description: "Maximalist cushioning for unparalleled comfort during runs.",
+	  category: "Running"
 	},
 	{
 	  id: 13,
@@ -141,6 +153,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "White/Black",
 	  description: "A sleek design blending modern aesthetics and comfort.",
+	  category: "Lifestyle"
 	},
 	{
 	  id: 14,
@@ -152,6 +165,7 @@ export const data = [
 	  isTrending: true,
 	  colors: "Green/Black",
 	  description: "Built for stability and long-lasting performance.",
+	  category: "Running"
 	},
 	{
 	  id: 15,
@@ -163,6 +177,7 @@ export const data = [
 	  isTrending: false,
 	  colors: "Pink/Gray",
 	  description: "Retro-inspired sneakers with a playful touch.",
+	  category: "Casual"
 	},
   ];
   
