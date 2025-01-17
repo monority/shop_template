@@ -5,60 +5,40 @@ import { reviews } from '../../temp/Reviews';
 import ReviewsTemplate from '../../components/global/ReviewsTemplate';
 import { calculateDate } from '../../components/global/calculateDate';
 import { renderStars } from '../../components/global/Stars';
-
+import { data } from '../../temp/STrending';
 const ProductDetails = () => {
 	const { id } = useParams();
-	const [data, setData] = useState(null);
-	const [stockSize, setStockSize] = useState([]);
-	const [active_size, setActive_size] = useState(null);
-	const [active_color, setActive_color] = useState([0]);
-	const [active_tab, setActive_tab] = useState(null);
-	const [average, setAverage] = useState([]);
-	const arrayDetails = ["Reviews", "Details", "Discussion"];
-	const set = [...new Set(data?.data?.color.split('/'))].join('/');
-	const sizes = data?.data?.variants.map(variant => variant.size);
-	console.log(sizes)
-	useEffect(() => {
-		ProductById(setData, id);
-	}, [id]);
 
-	useEffect(() => {
-		setStockSize(sizes);
-	}, [data]);
+	const find_id = data.find(item => item.id == id);
+	console.log(find_id)
+	// const reviews_display = filteredReviews?.map((review) => {
+	// 	const matchingRating = review.rating.find((rate) => rate.ref === data?.data?.sku);
 
-	const filter_stock = stockSize?.sort((a, b) => a - b);
-	const filteredReviews = reviews.filter((review) =>
-		review.rating.some((rating) => rating?.ref === data?.data?.sku)
-	);
-
-	const reviews_display = filteredReviews?.map((review) => {
-		const matchingRating = review.rating.find((rate) => rate.ref === data?.data?.sku);
-
-		return (
-			<ReviewsTemplate
-				key={review.id}
-				id={review.id}
-				message={review.message}
-				name={review.name}
-				date={calculateDate(review?.date)}
-				mark={renderStars(matchingRating?.mark)}
-				gender={review?.gender}
-			/>
-		);
-	});
+	// 	return (
+	// 		<ReviewsTemplate
+	// 			key={review.id}
+	// 			id={review.id}
+	// 			message={review.message}
+	// 			name={review.name}
+	// 			date={calculateDate(review?.date)}
+	// 			mark={renderStars(matchingRating?.mark)}
+	// 			gender={review?.gender}
+	// 		/>
+	// 	);
+	// });
 
 
 	return (
 		<>
-			<div id="product_details">
+			<section id="product_details">
 				<div className="lyt_container">
 					<div className="container">
 						<div className="wrapper_path">
-							<p>{data?.data?.category} {">"} {data?.data?.brand}</p>
+						<p>{find_id?.category} {">"} {find_id?.brand}</p>
 						</div>
 						<div className="container_content">
 							<div className="container_left">
-								<img src={data?.data?.image} alt="" className='img_product' />
+								<img src={`/${find_id?.image}`} alt="" className='img_product' />
 							</div>
 							<div className="container_right">
 								<div className="element_between">
@@ -66,7 +46,7 @@ const ProductDetails = () => {
 									<p className='text_color04'>{data?.data?.sku}</p>
 								</div>
 								<div className="element">
-									<h3>{data?.data?.title}</h3>
+									<h3>{find_id?.title} </h3>
 								</div>
 								<div className="element">
 									<p>Reviews : </p>
@@ -76,10 +56,7 @@ const ProductDetails = () => {
 								</div>
 								<div className="element_list">
 									<>
-										{set.split('/').map((color, index) => (
-											<p key={index} className={`${active_color === color ? 'active_color' : ''}  default_color`}
-												onClick={() => setActive_color(color)}>{color}</p>
-										))}
+								
 									</>
 								</div>
 								<div className="element">
@@ -88,10 +65,7 @@ const ProductDetails = () => {
 								<div className="element_list">
 									<>
 
-										{filter_stock?.map((item, index) => (
-											<p key={index} className={`${active_size === item ? 'active_size' : ''} default_size`}
-												onClick={() => setActive_size(item)}>{item}</p>
-										))}
+									
 
 									</>
 								</div>
@@ -115,17 +89,11 @@ const ProductDetails = () => {
 						<div className="container_content">
 							<div className="container_left">
 								<div className="container_tab">
-									{arrayDetails.map((item, index) => {
-										return (
-											<p key={index} className={`${active_tab === item ? 'active_tab' : ''} default_tab`}
-												onClick={() => setActive_tab(item)}>{item}</p>
-
-										)
-									})}
+									
 								</div>
 								<div className="container_text_detailed">
 									<div className="container_text_detailed">
-										{active_tab === "Reviews" && reviews_display}
+										{/* {active_tab === "Reviews" && reviews_display} */}
 									</div>
 								</div>
 
@@ -138,14 +106,14 @@ const ProductDetails = () => {
 									<div className="stars">
 										{/* {renderStars(average.toFixed(1))} */}
 									</div>
-									<p>{average}</p>
+									{/* <p>{average}</p> */}
 								</div>
 							</div>
 						</div>
 					</div>
 
 				</div>
-			</div>
+			</section>
 		</>
 	)
 }

@@ -1,15 +1,38 @@
 import React, { useState } from 'react';
-const ProductCard = ({ img, title, colors, price, stars, type, link_to, description }) => {
-	const [hover,SetHover] = useState(false);
+import { useNavigate } from 'react-router';
+const ProductCard = ({ img, title, colors, price, stars, type, link_to, description, id }) => {
+	const [hover, SetHover] = useState(false);
+	const [state, setCoords] = useState({ x: 0, y: 0 })
+	const navigate = useNavigate();
+	const Follower = ({ x, y }) => (
+		<div className="follower" style={{
+			transform: `translateX(${x}px) translateY(${y}px)`
+
+		}} />
+	)
+	const onMouseMove = (e) => {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const x = Math.min(Math.max(e.clientX - rect.left, 0), rect.width);
+		const y = Math.min(Math.max(e.clientY - rect.top, 0), rect.height);
+		setCoords({ x, y });
+	};
 	return (
-		<div className="wrapper cursor_pointer" onMouseEnter={() => SetHover(true)} onMouseLeave={() => SetHover(false)}>
+		<div className="wrapper cursor_pointer" onClick={() => navigate(`/product/${id}`)} onMouseMove={onMouseMove} onMouseEnter={() => SetHover(true)} onMouseLeave={() => SetHover(false)}>
+			<div className="container relative">
+				<div className='hover_fg' style={{
+
+					left: `${state.x + 15}px`,
+					top: `${state.y}px`,
+					display: hover ? 'block' : 'none',
+				}}><p>Shop it </p> <p>{price} €</p></div>
+			</div>
 			<div className="element_fg bg_color03">
 				<img src={img} className='image_card' alt={title} />
 			</div>
 			<div className="wrapper_default_column justify_between gap1">
 				<div className="element_between">
 					<div className="element">
-						<h5>{title}</h5>
+						<h4 className='break_word'>{title}</h4>
 					</div>
 					<div className="element">
 						<h5 className='text_color02'>{type}</h5>
@@ -35,14 +58,12 @@ const ProductCard = ({ img, title, colors, price, stars, type, link_to, descript
 
 				</div>
 				<div className="element">
-					<p className="text_color05 text_size01 break_word">{description}</p>
+					<p className="text_color05 text_size02 break_word">{description}</p>
 				</div>
 
-				
+
 			</div>
-			{/* <div className="element_hover">
-					{hover && <p>{title}</p>}
-				</div> */}
+
 		</div>
 	);
 };

@@ -9,7 +9,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Black", "White"],
 	  description: "High-performance running shoes designed for comfort and durability.",
-	  category: "Running"
+	  category: "Running",
+	  brand: "Adidas",
+	  availableSizes: [40, 41, 42, 43, 44]
 	},
 	{
 	  id: 2,
@@ -21,7 +23,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Red", "Black"],
 	  description: "Stylish sneakers with excellent cushioning for everyday wear.",
-	  category: "Lifestyle"
+	  category: "Lifestyle",
+	  brand: "Nike",
+	  availableSizes: [38, 39, 40, 41, 42]
 	},
 	{
 	  id: 3,
@@ -33,7 +37,9 @@ export const data = [
 	  isTrending: false,
 	  colors: ["Blue", "Gray"],
 	  description: "Lightweight and breathable, perfect for active lifestyles.",
-	  category: "Training"
+	  category: "Training",
+	  brand: "Puma",
+	  availableSizes: [39, 40, 41, 42, 43]
 	},
 	{
 	  id: 4,
@@ -45,7 +51,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["White", "Orange"],
 	  description: "Innovative design with energy-returning soles for optimal performance.",
-	  category: "Running"
+	  category: "Running",
+	  brand: "Reebok",
+	  availableSizes: [40, 41, 42, 43, 44]
 	},
 	{
 	  id: 5,
@@ -57,7 +65,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Black", "Red"],
 	  description: "A timeless classic that never goes out of style.",
-	  category: "Casual"
+	  category: "Casual",
+	  brand: "Converse",
+	  availableSizes: [36, 37, 38, 39, 40]
 	},
 	{
 	  id: 6,
@@ -69,7 +79,9 @@ export const data = [
 	  isTrending: false,
 	  colors: ["Gray", "White"],
 	  description: "Perfect for skateboarding and casual outings.",
-	  category: "Skateboarding"
+	  category: "Skateboarding",
+	  brand: "Vans",
+	  availableSizes: [37, 38, 39, 40, 41]
 	},
 	{
 	  id: 7,
@@ -81,7 +93,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Navy", "Gray"],
 	  description: "Premium quality sneakers with exceptional arch support.",
-	  category: "Walking"
+	  category: "Walking",
+	  brand: "New Balance",
+	  availableSizes: [41, 42, 43, 44, 45]
 	},
 	{
 	  id: 8,
@@ -93,7 +107,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Black", "Blue"],
 	  description: "Advanced cushioning for high-impact activities.",
-	  category: "Training"
+	  category: "Training",
+	  brand: "Under Armour",
+	  availableSizes: [39, 40, 41, 42, 43]
 	},
 	{
 	  id: 9,
@@ -105,7 +121,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Red", "White"],
 	  description: "Iconic basketball sneakers with a bold design.",
-	  category: "Basketball"
+	  category: "Basketball",
+	  brand: "Jordan",
+	  availableSizes: [42, 43, 44, 45, 46]
 	},
 	{
 	  id: 10,
@@ -117,7 +135,9 @@ export const data = [
 	  isTrending: false,
 	  colors: ["White", "Green"],
 	  description: "Designed for long-distance runners with excellent support.",
-	  category: "Running"
+	  category: "Running",
+	  brand: "Asics",
+	  availableSizes: [40, 41, 42, 43, 44]
 	},
 	{
 	  id: 11,
@@ -129,7 +149,9 @@ export const data = [
 	  isTrending: false,
 	  colors: ["Black", "Yellow"],
 	  description: "Engineered for speed and responsiveness on the track.",
-	  category: "Track"
+	  category: "Track",
+	  brand: "Saucony",
+	  availableSizes: [38, 39, 40, 41, 42]
 	},
 	{
 	  id: 12,
@@ -141,7 +163,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Blue", "Orange"],
 	  description: "Maximalist cushioning for unparalleled comfort during runs.",
-	  category: "Running"
+	  category: "Running",
+	  brand: "Hoka One One",
+	  availableSizes: [41, 42, 43, 44, 45]
 	},
 	{
 	  id: 13,
@@ -153,7 +177,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["White", "Black"],
 	  description: "A sleek design blending modern aesthetics and comfort.",
-	  category: "Lifestyle"
+	  category: "Lifestyle",
+	  brand: "Adidas",
+	  availableSizes: [39, 40, 41, 42, 43]
 	},
 	{
 	  id: 14,
@@ -165,7 +191,9 @@ export const data = [
 	  isTrending: true,
 	  colors: ["Green", "Black"],
 	  description: "Built for stability and long-lasting performance.",
-	  category: "Running"
+	  category: "Running",
+	  brand: "Nike",
+	  availableSizes: [40, 41, 42, 43, 44]
 	},
 	{
 	  id: 15,
@@ -177,7 +205,8 @@ export const data = [
 	  isTrending: false,
 	  colors: ["Pink", "Gray"],
 	  description: "Retro-inspired sneakers with a playful touch.",
-	  category: "Casual"
+	  category: "Casual",
+	  brand: "Puma",
+	  availableSizes: [38, 39, 40, 41, 42]
 	},
-  ];
-  
+];

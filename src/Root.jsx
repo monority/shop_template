@@ -12,7 +12,7 @@ const Root = () => {
 		<BrowserRouter>
 			<AppContainer>
 				<Header />
-				<SubNav></SubNav>
+		
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/product/:id" element={<ProductDetails />} />
