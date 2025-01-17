@@ -20,9 +20,11 @@ const Trending = ({ data_handle }) => {
 				colors={sneaker.colors}
 				description={sneaker.description}
 				img={sneaker.image}
+				type={sneaker.category}
 				price={sneaker.price}
 				stars={sneaker.stars}
 				link_to={() => navigation(sneaker.id)}
+				hover={sneaker.title}
 			/>)
 	})
 
@@ -34,7 +36,7 @@ const Trending = ({ data_handle }) => {
 						<div className="wrapper">
 							<h2 className='text_center font_family_Geist'>Trending</h2>
 						</div>
-						<div className="container flex_wrap">
+						<div className="container flex_wrap media_responsive">
 							{display_sneakers}
 						</div>
 					</div>

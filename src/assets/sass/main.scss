@@ -12,7 +12,10 @@
 .app_container {
 	display: flex;
 	flex-direction: column;
-	gap: var(--size_rem_16);
+	gap: var(--size_rem_8);
+	@media (min-width: v.$lg_breakpoint) {
+		gap: var(--size_rem_16);
+	}
 }
 
 .lyt_container {
@@ -46,6 +49,15 @@
 	justify-content: center;
 	gap: var(--size_rem_4);
 
+	@media (min-width: v.$lg_breakpoint) {
+		flex-direction: row;
+	}
+}
+
+.media_responsive {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	@media (min-width: v.$lg_breakpoint) {
 		flex-direction: row;
 	}
@@ -91,12 +103,13 @@
 	gap: var(--size_rem_16);
 }
 
-.wrapper_column_centered{
+.wrapper_column_centered {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
 .wrapper_default_column {
 	display: flex;
 	flex-direction: column;
@@ -107,11 +120,13 @@
 	flex-direction: row;
 	gap: var(--size_rem_2);
 }
-.wrapper_centered{
+
+.wrapper_centered {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .element_centered {
 	display: flex;
 	justify-content: center;
@@ -136,4 +151,3 @@
 		flex: 1 1 0%;
 	}
 }
-

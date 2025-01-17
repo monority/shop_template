@@ -3,7 +3,7 @@
 #home {
 
 	#hero{
-
+		
 		.wrapper_box{
 			display: flex;
 			align-items: center;
@@ -17,11 +17,24 @@
 				background-color: var(--bg_color03);
 		}
 		.container_between{
-			gap: 24rem;
+			gap: calc(4rem + 12vw);
+		
 		}
 		#review_card{
-			width: 50rem;
+			width: 100%;
+			@media (min-width: v.$lg_breakpoint) {
+				width: calc(30rem + 5vw);
+			}
 			height: 12rem;
+		}
+
+	}
+	#image_hero{
+		img{
+			width: max(34vw,38rem);
+		}
+		h2{
+			font-size: calc(10rem + 5vw)
 		}
 	}
 	#trending {
@@ -30,7 +43,10 @@
 			gap: var(--size_rem_2);
 		}
 
-
+		.element_hover{
+			position: absolute;
+			display: flex;
+		}
 		.wrapper {
 			display: flex;
 			flex-basis: calc(33% - var(--size_rem_8));

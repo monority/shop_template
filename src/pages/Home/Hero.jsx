@@ -14,7 +14,7 @@ const Hero = ({ text_title, title }) => {
 		<>
 			<section id="hero">
 				<div className="lyt_container">
-					<div className="container_between">
+					<div className="container_between media_responsive">
 						<div className="container_column f_basis50">
 							<div className="element">
 								<h1 className='font_family_Geist text_center'>Trendy shoes of luxury <br /> Elevate Your Every Step <br /> Where Style Meets Comfort</h1>
@@ -28,7 +28,7 @@ const Hero = ({ text_title, title }) => {
 							</div>
 						</div>
 						<div className="wrapper_column_centered f_basis50">
-							<div className="wrapper_default_column">
+							<div className="wrapper_default_column gap2">
 								<ReviewCard
 									key={currentReview.id}
 									id={currentReview.id}
@@ -38,7 +38,7 @@ const Hero = ({ text_title, title }) => {
 									review_total={reviews.length}
 									stars={renderStars(averageRating)}
 									title={currentReview.title}
-									
+
 								/>
 								<div className="element_row">
 									<span className='arrow_btn' onClick={() => setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length)}>
@@ -65,15 +65,6 @@ const Hero = ({ text_title, title }) => {
 									</span>
 								</div>
 							</div>
-
-						</div>
-					</div>
-					<div className="container_between">
-						<div className="wrapper f_basis50">
-							<img src="/hero.png" alt="" />
-						</div>
-						<div className="wrapper f_basis50">
-							<h1 className='font_family_bebas title_size10'>Sneakara</h1>
 						</div>
 					</div>
 				</div>

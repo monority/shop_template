@@ -7,7 +7,7 @@ export const data = [
 	  price: "180",
 	  stars: 4.8,
 	  isTrending: true,
-	  colors: "Black/White",
+	  colors: ["Black", "White"],
 	  description: "High-performance running shoes designed for comfort and durability.",
 	  category: "Running"
 	},
@@ -19,7 +19,7 @@ export const data = [
 	  price: "150",
 	  stars: 4.5,
 	  isTrending: true,
-	  colors: "Red/Black",
+	  colors: ["Red", "Black"],
 	  description: "Stylish sneakers with excellent cushioning for everyday wear.",
 	  category: "Lifestyle"
 	},
@@ -31,7 +31,7 @@ export const data = [
 	  price: "130",
 	  stars: 4.2,
 	  isTrending: false,
-	  colors: "Blue/Gray",
+	  colors: ["Blue", "Gray"],
 	  description: "Lightweight and breathable, perfect for active lifestyles.",
 	  category: "Training"
 	},
@@ -43,7 +43,7 @@ export const data = [
 	  price: "120",
 	  stars: 4.0,
 	  isTrending: true,
-	  colors: "White/Orange",
+	  colors: ["White", "Orange"],
 	  description: "Innovative design with energy-returning soles for optimal performance.",
 	  category: "Running"
 	},
@@ -55,7 +55,7 @@ export const data = [
 	  price: "110",
 	  stars: 4.7,
 	  isTrending: true,
-	  colors: "Black/Red",
+	  colors: ["Black", "Red"],
 	  description: "A timeless classic that never goes out of style.",
 	  category: "Casual"
 	},
@@ -67,7 +67,7 @@ export const data = [
 	  price: "90",
 	  stars: 4.3,
 	  isTrending: false,
-	  colors: "Gray/White",
+	  colors: ["Gray", "White"],
 	  description: "Perfect for skateboarding and casual outings.",
 	  category: "Skateboarding"
 	},
@@ -79,19 +79,19 @@ export const data = [
 	  price: "170",
 	  stars: 4.6,
 	  isTrending: true,
-	  colors: "Navy/Gray",
+	  colors: ["Navy", "Gray"],
 	  description: "Premium quality sneakers with exceptional arch support.",
 	  category: "Walking"
 	},
 	{
 	  id: 8,
-	  image: "img/img_trending/trending8.png",
+	  image: "img/img_trending/trending08.png",
 	  title: "Under Armour HOVR Phantom",
 	  text: "Yes",
 	  price: "160",
 	  stars: 4.4,
 	  isTrending: true,
-	  colors: "Black/Blue",
+	  colors: ["Black", "Blue"],
 	  description: "Advanced cushioning for high-impact activities.",
 	  category: "Training"
 	},
@@ -103,7 +103,7 @@ export const data = [
 	  price: "200",
 	  stars: 4.9,
 	  isTrending: true,
-	  colors: "Red/White",
+	  colors: ["Red", "White"],
 	  description: "Iconic basketball sneakers with a bold design.",
 	  category: "Basketball"
 	},
@@ -115,7 +115,7 @@ export const data = [
 	  price: "140",
 	  stars: 4.3,
 	  isTrending: false,
-	  colors: "White/Green",
+	  colors: ["White", "Green"],
 	  description: "Designed for long-distance runners with excellent support.",
 	  category: "Running"
 	},
@@ -127,7 +127,7 @@ export const data = [
 	  price: "130",
 	  stars: 4.1,
 	  isTrending: false,
-	  colors: "Black/Yellow",
+	  colors: ["Black", "Yellow"],
 	  description: "Engineered for speed and responsiveness on the track.",
 	  category: "Track"
 	},
@@ -139,7 +139,7 @@ export const data = [
 	  price: "150",
 	  stars: 4.6,
 	  isTrending: true,
-	  colors: "Blue/Orange",
+	  colors: ["Blue", "Orange"],
 	  description: "Maximalist cushioning for unparalleled comfort during runs.",
 	  category: "Running"
 	},
@@ -151,7 +151,7 @@ export const data = [
 	  price: "180",
 	  stars: 4.8,
 	  isTrending: true,
-	  colors: "White/Black",
+	  colors: ["White", "Black"],
 	  description: "A sleek design blending modern aesthetics and comfort.",
 	  category: "Lifestyle"
 	},
@@ -163,7 +163,7 @@ export const data = [
 	  price: "160",
 	  stars: 4.5,
 	  isTrending: true,
-	  colors: "Green/Black",
+	  colors: ["Green", "Black"],
 	  description: "Built for stability and long-lasting performance.",
 	  category: "Running"
 	},
@@ -175,7 +175,7 @@ export const data = [
 	  price: "100",
 	  stars: 4.0,
 	  isTrending: false,
-	  colors: "Pink/Gray",
+	  colors: ["Pink", "Gray"],
 	  description: "Retro-inspired sneakers with a playful touch.",
 	  category: "Casual"
 	},

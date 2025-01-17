@@ -6,6 +6,7 @@ import Newsletter from './Home/Newsletter'
 import Branding from './Home/Branding'
 import { useEffect, useState } from 'react'
 import { ProductFetch, ProductTrending } from '../queries/ProductFetch'
+import ImageHero from './Home/ImageHero'
 const Home = () => {
 	const [data, setData] = useState([]);
 	const [data_trending, setData_trending] = useState([]);
@@ -18,6 +19,7 @@ const Home = () => {
 			<div id="home">
 				<div className="app_container">
 					<Hero data_handle={data} />
+					<ImageHero/>
 					<Trending data_handle={data_trending} />
 					<Branding />
 				</div>
